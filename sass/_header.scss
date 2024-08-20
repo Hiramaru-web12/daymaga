@@ -1,0 +1,110 @@
+@use 'variable' as v;
+@use 'mixin' as m;
+@use 'function' as f;
+
+
+.p-header {
+  background:#fff;
+ 
+  &.is-scroll {
+    background: v.$color-bg;
+  }
+}
+
+.p-header__logo--top {
+  padding-left: clamp(1.25rem, 0.634rem + 2.63vw, 3rem);
+  padding-top: f.pxToRem(32);
+  
+  &.is-scroll {
+    display: none;
+  }
+}
+
+.p-header__logo--down {
+  display: none;
+  padding-left:clamp(1.25rem, 0.634rem + 2.63vw, 3rem);
+  padding-top: f.pxToRem(32);
+
+  @include m.mq('sp'){
+    padding-top: f.pxToRem(20);
+    width: f.pxToRem(160);
+  } 
+
+  &.is-scroll {
+    display: block;
+  }
+}
+
+.p-header__nav {
+    background: v.$color-accent;
+    display: flex;
+    padding: f.pxToRem(24) f.pxToRem(64);
+    margin-top: 0;
+    align-items:  center;
+    align-self: start;
+    border-radius: 0 0 0 32px;
+
+    @include m.mq('sp') {
+      padding: f.pxToRem(28) f.pxToRem(26);
+
+      &.is-scroll {
+        padding: f.pxToRem(20) f.pxToRem(32) f.pxToRem(20) f.pxToRem(40);
+    }
+ }
+}
+
+.p-header-nav__inner {
+    display: flex;
+    gap: clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
+    color: #fff;
+    padding: f.pxToRem(14) 0;
+    
+    li {
+      transition: 0.5s ease-out;
+  
+      &:hover {
+        opacity: .8;
+      }
+    }
+  } 
+
+
+.p-header-button__wrap {
+  display: flex;
+  gap:clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
+  margin-left: clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
+}
+
+.p-header__search--pc {
+ margin-left: clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
+}
+
+/* ===============================================
+ドロワー
+=============================================== */
+.p-drawer__icon {
+  top: f.pxToRem(20);
+}
+
+.p-drawer__wrap {
+display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+justify-content: center;
+
+&.is-scroll {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+}
+
+.p-header__search--sp {
+  display: block;
+  margin-top: f.pxToRem(58); 
+
+  &.is-scroll {
+   margin-top: 0;
+   margin-right: f.pxToRem(80);
+  }
+ }

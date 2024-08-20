@@ -1,0 +1,17 @@
+@use 'variable' as v;
+@use 'mixin' as m;
+@use 'function' as f;
+
+/* ===============================================
+ヘッダー
+=============================================== */
+.l-header {
+  position: fixed;
+  width: 100%;
+}
+
+
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+}
