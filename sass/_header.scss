@@ -2,15 +2,6 @@
 @use 'mixin' as m;
 @use 'function' as f;
 
-
-.p-header {
-  background:#fff;
- 
-  &.is-scroll {
-    background: v.$color-bg;
-  }
-}
-
 .p-header__logo--top {
   padding-left: clamp(1.25rem, 0.634rem + 2.63vw, 3rem);
   padding-top: f.pxToRem(32);
@@ -118,7 +109,7 @@ justify-content: center;
   @include m.mq("pc") {
     display: none;
   }
-  
+
   display: flex;
   flex-direction: column;
   gap: f.pxToRem(32);
