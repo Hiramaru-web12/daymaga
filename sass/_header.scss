@@ -82,13 +82,9 @@
 /* ===============================================
 ドロワー
 =============================================== */
-.p-drawer__icon {
-  top: f.pxToRem(20);
-}
-
 .p-drawer__wrap {
 display: flex;
-  flex-direction: column;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 justify-content: center;
@@ -107,4 +103,27 @@ justify-content: center;
    margin-top: 0;
    margin-right: f.pxToRem(80);
   }
+ }
+
+ .p-drawer {
+  @include m.mq("pc") {
+    display: none;
+  }
+  
+  background: v.$color-accent;
+  color: #fff;
+ }
+
+ .p-drawer__nav {
+  @include m.mq("pc") {
+    display: none;
+  }
+  
+  display: flex;
+  flex-direction: column;
+  gap: f.pxToRem(32);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
  }

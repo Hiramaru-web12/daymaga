@@ -57,7 +57,7 @@
         </div>
         <!-- drawer -->
         <div class="p-drawer__wrap is-sp">
-          <div class="c-drawer__icon p-drawer__icon">
+          <div class="c-drawer__icon l-drawer__icon">
             <div class="c-drawer__bars">
               <span></span>
               <span></span>
@@ -68,6 +68,18 @@
             <img src="<?php echo get_template_directory_uri(  ); ?>/img/header/tabler_search.svg" alt="search">
           </div>
         </div>
+      </div>
+    </div>
+    <div class="l-drawer p-drawer is-sp">
+      <div class="l-drawer__inner">
+        <ul class="p-drawer__nav">
+          <li><a href="">新着情報</a></li>
+          <li><a href="">TIPS</a></li>
+          <li><a href="">インタビュー</a></li>
+          <li><a href="">ニュース</a></li>
+          <li><a href=""><img src="<?php echo get_template_directory_uri(  ); ?>/img/header/tabler_search.svg"
+                alt="search"></a></li>
+        </ul>
       </div>
     </div>
 
