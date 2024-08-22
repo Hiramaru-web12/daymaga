@@ -617,6 +617,8 @@ CTA
 .p-footer-copyright__wrap {
   font-weight: 300;
   line-height: 120%;
+  display: block;
+  margin: 0 auto;
 }
 
 .p-footer-copyright {
