@@ -314,6 +314,8 @@ CTA
   line-height: 130%;
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
+  -webkit-box-shadow: 0px 0px 34px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 34px 0 rgba(0, 0, 0, 0.05);
 }
 .c-cta__button:hover {
   opacity: 0.8;

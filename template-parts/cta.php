@@ -1,6 +1,6 @@
 <section class="l-cta p-cta">
   <div class="l-cta__inner">
-    <div class="l-cta__content">
+    <div class="p-cta__content">
       <button class="c-cta__button">
         <p class="c-cta__button--left">プロジェクトの相談をする<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
             xmlns="http://www.w3.org/2000/svg">
