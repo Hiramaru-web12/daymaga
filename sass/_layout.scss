@@ -46,3 +46,42 @@
   margin: f.pxToRem(82) auto 0;
   text-align: center;
 }
+
+/* ===============================================
+CTA
+=============================================== */
+.l-cta {
+  margin-top: f.pxToRem(64);
+  padding: f.pxToRem(74) auto;
+
+  @include m.mq('sp') {
+    margin-top: f.pxToRem(48);
+    padding: f.pxToRem(40) auto;
+  } 
+}
+
+.l-cta__inner {
+  max-width: f.pxToRem(840);
+  margin: 0 auto; 
+
+  @include m.mq('sp') {
+    padding: 0 f.pxToRem(40);
+  }
+
+  @include m.mq('tab') {
+    padding: 0 f.pxToRem(10);
+    margin: 0 auto;
+  }
+}
+
+.l-cta__content {
+  display: flex;
+  gap: clamp(1.75rem, -5.536rem + 15.18vw, 8.125rem);
+  padding: clamp(3.75rem, 3.09rem + 2.82vw, 5.625rem) 0;
+
+  @include m.mq('sp') {
+   flex-flow: column wrap;
+   gap: f.pxToRem(40);
+   align-items: flex-start;
+  } 
+}

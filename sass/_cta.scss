@@ -1,0 +1,16 @@
+@use 'variable' as v;
+@use 'mixin' as m;
+@use 'function' as f;
+
+.p-cta {
+  background-image: url("../img/CTA/cta_bg-pc.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: f.pxToRem(240);
+
+  @include m.mq('sp'){
+    background-image: url("../img/CTA/cta_bg-sp.png");
+  } 
+  }
+
+  

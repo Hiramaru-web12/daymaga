@@ -117,3 +117,100 @@ drawer
     }
   }
 }
+
+/* ===============================================
+CTA
+=============================================== */
+.c-cta__button {
+  display: inline-block;
+  background: transparent;
+  font-weight: v.$bold;
+  line-height: 130%;
+  transition: 0.5s ease-out;
+
+  &:hover {
+    opacity: .8;
+    transform: translateY(8px); 
+  }
+}
+
+.c-cta__button--left {
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align:left; 
+  letter-spacing: .48px;
+  font-size:f.pxToRem(24);
+  padding:f.pxToRem(22) f.pxToRem(28) f.pxToRem(14) f.pxToRem(30);
+  border-radius: 8px;
+  position: relative;
+  background: transparent;
+  color: v.$color-accent;
+  background: #fff;
+  font-family: v.$font-deco;
+  
+  @include m.mq('sp') {
+    font-size: f.pxToRem(18);
+    padding:f.pxToRem(12) f.pxToRem(14) f.pxToRem(10) f.pxToRem(18);
+  }
+
+  svg {
+    padding-left: f.pxToRem(10);
+    vertical-align: middle;
+  }
+  
+  &::before {
+    position: absolute;
+    content: "コンサルタントをお探しの企業様へ";
+    font-family: v.$font-main;
+    display: inline-block;
+    top: -24px;
+    left: 0;
+    border: 1px solid #fff;
+    border-radius: 8px 8px 8px 0;
+    font-size: clamp(0.875rem, 0.787rem + 0.38vw, 1.125rem);
+    background: v.$color-primary;
+    color: #fff;
+    padding: f.pxToRem(6) f.pxToRem(14);
+    line-height: 130%;
+  }
+}
+
+.c-cta__button--right {
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align:left; 
+  letter-spacing: .48px;
+  font-size: f.pxToRem(24);
+  padding:f.pxToRem(22) f.pxToRem(28) f.pxToRem(14) f.pxToRem(30);
+  border-radius: 8px;
+  position: relative;
+  background: transparent;
+  color: #fff;
+  font-family: v.$font-deco;
+
+  @include m.mq('sp') {
+    font-size: f.pxToRem(18);
+    padding:f.pxToRem(12) f.pxToRem(14) f.pxToRem(10) f.pxToRem(18);
+  }
+
+  svg {
+    padding-left: f.pxToRem(10);
+    vertical-align: middle;
+  }
+  
+  &::before {
+    position: absolute;
+    content: "コンサルタントの方へ";
+    font-family: v.$font-main;
+    display: inline-block;
+    top: -24px;
+    left: 0;
+    border: 1px solid #fff;
+    border-radius: 8px 8px 8px 0;
+    font-size: clamp(0.875rem, 0.787rem + 0.38vw, 1.125rem);
+    background: #fff;
+    color: v.$color-primary;
+    padding: f.pxToRem(6) f.pxToRem(14);
+    line-height: 130%;
+  }
+}
