@@ -2,6 +2,19 @@
 @use 'mixin' as m;
 @use 'function' as f;
 
+.l-inner {
+  max-width: f.pxToRem(1034);
+  margin: 0 auto;
+
+  @include m.mq('sp'){
+    padding: 0 f.pxToRem(20);
+  } 
+
+  @include m.mq('tab'){
+    padding: 0 f.pxToRem(40);
+  } 
+}
+
 /* ===============================================
 ヘッダー
 =============================================== */
@@ -74,14 +87,15 @@ CTA
   }
 }
 
-.l-cta__content {
-  display: flex;
-  gap: clamp(1.75rem, -5.536rem + 15.18vw, 8.125rem);
-  padding: clamp(3.75rem, 3.09rem + 2.82vw, 5.625rem) 0;
 
-  @include m.mq('sp') {
-   flex-flow: column wrap;
-   gap: f.pxToRem(40);
-   align-items: flex-start;
-  } 
+// フッター
+.l-footer {
+  padding: f.pxToRem(48) 0 f.pxToRem(28);
 }
+
+.l-footer__inner{
+  display: flex;
+  flex-direction: column;
+  gap: f.pxToRem(24);
+}
+

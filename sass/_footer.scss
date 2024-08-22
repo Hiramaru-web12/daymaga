@@ -1,0 +1,67 @@
+@use 'variable' as v;
+@use 'mixin' as m;
+@use 'function' as f;
+
+.p-footer {
+  background: #241919;
+  color: #fff;
+}
+
+.p-footer__content {
+  display: flex;
+  justify-content: space-between;
+  
+  @include m.mq('sp') {
+    flex-direction: column;
+    gap: f.pxToRem(36);
+  }
+}
+.p-footer__logo {
+  width: f.pxToRem(234);
+
+  @include m.mq('sp') {
+    margin: 0 auto;
+  }
+}
+
+.p-footer-nav__wrap {
+  display: flex;
+  gap: clamp(2.5rem, 1.972rem + 2.25vw, 4rem);
+
+  @include m.mq('sp')  {
+    max-width: f.pxToRem(282);
+    margin: 0 auto;
+  }
+}
+
+.p-footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: f.pxToRem(24);
+  line-height: 120%;
+  letter-spacing: f.pxToRem(0.8);
+  font-weight: 500;
+
+  @include m.mq('sp') {
+  gap: f.pxToRem(32);
+  margin: 0 auto;
+ } 
+}
+
+.p-footer-copyright__wrap {
+ font-weight: 300;
+ line-height: 120%;
+}
+
+.p-footer-copyright {
+ text-align: center;
+}
+
+.p-footer__text {
+  font-size: f.pxToRem(12);
+  padding-top: f.pxToRem(24);
+
+  @include m.mq('sp') {
+    padding-top: f.pxToRem(40);
+  }
+}
