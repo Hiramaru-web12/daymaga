@@ -1,0 +1,65 @@
+@use 'variable' as v;
+@use 'mixin' as m;
+@use 'function' as f;
+
+.p-page404__content {
+  background: #fff;
+  border-radius: f.pxToRem(24);
+  box-shadow: 0px 24px 64px 0px rgba(0 0 0/ 0.05);
+  display: flex;
+  padding: f.pxToRem(80) f.pxToRem(88);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: f.pxToRem(32);
+
+  @include m.mq('sp') {
+    padding: f.pxToRem(56) f.pxToRem(20);
+  }
+}
+
+.p-page404__wrap {
+  display: flex;
+  max-width: f.pxToRem(384);
+  flex-direction: column;
+  align-items: center;
+  gap: f.pxToRem(20);
+}
+
+.p-page404_message {
+  font-size: clamp(1.5rem, 1.28rem + 0.94vw, 2.125rem);
+  color: v.$color-accent;
+  font-weight: v.$bold;
+}
+
+.p-page404__404 {
+  color: v.$color-primary;
+  font-size: clamp(5rem, 4.56rem + 1.88vw, 6.25rem);
+  font-weight: 900;
+  letter-spacing: f.pxToRem(8);
+}
+
+.p-page404_text--top {
+  text-align: center;
+  font-family: v.$font-deco;
+  font-size: clamp(1.25rem, 1.162rem + 0.38vw, 1.5rem);
+  font-weight: v.$bold;
+  line-height: 180%; 
+  letter-spacing: clamp(0.125rem, 0.116rem + 0.04vw, 0.15rem);
+
+  @include m.mq('sp') {
+    text-align: left;
+  }
+}
+
+.p-page404_text--bottom {
+  text-align: center;
+  font-size: clamp(0.938rem, 0.827rem + 0.47vw, 1.25rem);
+  font-weight: 500;
+  line-height: 180%; 
+  letter-spacing: clamp(0.094rem, 0.083rem + 0.05vw, 0.125rem);
+
+  @include m.mq('sp') {
+    text-align: left;
+  }
+}
