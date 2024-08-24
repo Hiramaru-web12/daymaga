@@ -18,5 +18,9 @@
     </div>
   </div>
 </section>
+
+<?php get_template_part('template-parts/tag-list');?>
+
 <?php get_template_part('template-parts/cta');?>
+
 <?php get_footer(); ?>

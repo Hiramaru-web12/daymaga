@@ -1,0 +1,45 @@
+@use 'variable' as v;
+@use 'mixin' as m;
+@use 'function' as f;
+
+.p-tag__title {
+ display: inline-block;
+ color: #fff;
+ font-family: "Zen Maru Gothic";
+ font-size: f.pxToRem(18);
+ font-weight: 700;
+ line-height: 150%; 
+ letter-spacing: f.pxToRem(2.7);
+ background: v.$color-primary;
+ padding: f.pxToRem(12) f.pxToRem(43) f.pxToRem(8) f.pxToRem(24);
+ border-radius: 16px 16px 0px 0px;
+
+ @include m.mq('sp'){
+  font-size: f.pxToRem(15);
+  letter-spacing: f.pxToRem(2.25);
+  padding: f.pxToRem(10) f.pxToRem(28) f.pxToRem(6) f.pxToRem(16);
+ } 
+
+ svg {
+  vertical-align: middle;
+  padding-right: clamp(0.5rem, 0.456rem + 0.19vw, 0.625rem);
+
+  @include m.mq('sp'){
+    width: f.pxToRem(18);
+    height: f.pxToRem(18);
+  } 
+ }
+}
+
+.p-tag-list__wrap {
+  border-radius: 0px 20px 20px 20px;
+  border: 1px solid v.$color-primary;
+  background:  #fff;
+  padding: f.pxToRem(36) f.pxToRem(92);
+  display: flex;
+  flex-wrap: wrap;
+
+  @include m.mq('sp') {
+    padding: f.pxToRem(24) f.pxToRem(16);
+  } 
+}

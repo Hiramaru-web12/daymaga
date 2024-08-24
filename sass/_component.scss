@@ -233,3 +233,15 @@ CTA
     letter-spacing: 1.12px;
   }
 }
+
+/* ===============================================
+タグ
+=============================================== */
+.c-tag {
+ font-size: f.pxToRem(12);
+ line-height: 180%;
+ padding: f.pxToRem(2) f.pxToRem(8);
+ border-radius: 16px;
+ background: v.$color-tag;
+ color: v.$color-tag-text;
+}

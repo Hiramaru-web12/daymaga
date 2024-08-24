@@ -204,6 +204,13 @@ CTA
 }
 
 /* ===============================================
+タグ
+=============================================== */
+.l-tag {
+  padding-top: 4rem;
+}
+
+/* ===============================================
 ヘッダーのボタン
 =============================================== */
 .c-header__button--left {
@@ -431,6 +438,18 @@ CTA
     font-size: 0.9375rem;
     letter-spacing: 1.12px;
   }
+}
+
+/* ===============================================
+タグ
+=============================================== */
+.c-tag {
+  font-size: 0.75rem;
+  line-height: 180%;
+  padding: 0.125rem 0.5rem;
+  border-radius: 16px;
+  background: #DAEFF8;
+  color: #333;
 }
 
 .p-header__logo--top {
@@ -787,5 +806,52 @@ CTA
 @media screen and ( max-width: 759px ) {
   .p-page404_text--bottom {
     text-align: left;
+  }
+}
+
+.p-tag__title {
+  display: inline-block;
+  color: #fff;
+  font-family: "Zen Maru Gothic";
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.16875rem;
+  background: #629DE2;
+  padding: 0.75rem 2.6875rem 0.5rem 1.5rem;
+  border-radius: 16px 16px 0px 0px;
+}
+@media screen and ( max-width: 759px ) {
+  .p-tag__title {
+    font-size: 0.9375rem;
+    letter-spacing: 0.140625rem;
+    padding: 0.625rem 1.75rem 0.375rem 1rem;
+  }
+}
+.p-tag__title svg {
+  vertical-align: middle;
+  padding-right: clamp(0.5rem, 0.456rem + 0.19vw, 0.625rem);
+}
+@media screen and ( max-width: 759px ) {
+  .p-tag__title svg {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}
+
+.p-tag-list__wrap {
+  border-radius: 0px 20px 20px 20px;
+  border: 1px solid #629DE2;
+  background: #fff;
+  padding: 2.25rem 5.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and ( max-width: 759px ) {
+  .p-tag-list__wrap {
+    padding: 1.5rem 1rem;
   }
 }
