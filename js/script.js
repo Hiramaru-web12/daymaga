@@ -6,7 +6,6 @@ jQuery(function(){
     spaceBetween: 64,
     centeredSlides: true,
     slidesPerView: 1.8,
-    autoHeight: true,
 
     autoplay: {
       delay: 4000,
@@ -16,7 +15,8 @@ jQuery(function(){
     grabCursor: true,
     breakpoints: {
     0: {
-      slidesPerView: 1.2,
+      slidesPerView: 'auto',
+      spaceBetween: 16,
     },
     700: {
       slidesPerView: 'auto',

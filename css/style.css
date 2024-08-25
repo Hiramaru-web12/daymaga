@@ -958,6 +958,11 @@ CTA
 .swiper-slide {
   max-width: 33.75rem;
 }
+@media screen and ( max-width: 759px ) {
+  .swiper-slide {
+    max-width: 16.875rem;
+  }
+}
 
 .swiper-slide-active {
   -webkit-transform: translateY(-40px) !important;
@@ -992,7 +997,7 @@ CTA
 }
 @media screen and ( max-width: 759px ) {
   .p-fv-swiper__button--prev {
-    left: -1rem;
+    left: 1rem;
   }
 }
 
@@ -1005,6 +1010,7 @@ CTA
 }
 @media screen and ( max-width: 759px ) {
   .p-fv-swiper__button--next {
-    right: -1rem;
+    left: auto;
+    right: 1rem;
   }
 }

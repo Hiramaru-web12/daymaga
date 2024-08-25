@@ -45,6 +45,10 @@
 
 .swiper-slide {
   max-width: f.pxToRem(540);
+
+  @include m.mq('sp'){
+    max-width: f.pxToRem(270);
+  } 
 }
 
 .swiper-slide-active {
@@ -75,7 +79,7 @@
   z-index: 1;
 
   @include m.mq('sp'){
-    left: f.pxToRem(-16);
+    left: f.pxToRem(16);
   } 
 }
 
@@ -87,6 +91,7 @@
   z-index: 1;
 
   @include m.mq('sp'){
-    right: f.pxToRem(-16);
+    left: auto;
+    right: f.pxToRem(16);
   } 
 }
