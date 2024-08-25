@@ -13,3 +13,49 @@
     display: none;
   }
 }
+
+/* ===============================================
+カード
+=============================================== */
+.p-fv__card {
+ background: #fff;
+ padding: f.pxToRem(28);
+ border-radius: 20px;
+ box-shadow: 0px 0px 30px 0px rgb(0 0 0 /0.02);
+}
+
+.p-card__img {
+   img {
+    width: 100%;
+    object-fit: cover;
+   }
+}
+
+.p-card__body {
+  margin: f.pxToRem(16) 0;
+  gap: f.pxToRem(8);
+}
+
+.p-card__time {
+ color:v.$color-text-gray;
+ font-family: "Noto Sans JP";
+ font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
+ line-height: 120%; 
+}
+
+.p-card__title {
+ font-size: f.pxToRem(15);
+ font-weight: 500;
+ letter-spacing: f.pxToRem(1);
+ line-height: 140%; 
+ letter-spacing: f.pxToRem( .3);
+ margin-top: f.pxToRem(8);
+} 
+
+.p-card__category {
+ border: 1px solid #000;
+ display: inline-block;
+ font-size: f.pxToRem(13);
+ border-radius: 6px;
+ margin-top: f.pxToRem(8);
+}

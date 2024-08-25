@@ -12,7 +12,7 @@
       <ul class="p-tag-list__wrap">
         <?php if ($post_tags) : ?>
         <?php foreach($post_tags as $tag) : ?>
-        <li><a href="<?php echo get_tag_link($tag -> term_id); ?>" class="c-tag"><?php echo $tag->name; ?></a></li>
+        <li><a href="<?php echo get_tag_link($tag ->term_id); ?>" class="c-tag"><?php echo $tag -> name; ?></a></li>
         <?php endforeach; ?>
         <?php endif; ?>
       </ul>
