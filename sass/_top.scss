@@ -2,10 +2,13 @@
 @use 'mixin' as m;
 @use 'function' as f;
 
+/* ===============================================
+fv スライダー
+=============================================== */
 .p-fv-card__title {
  font-size: f.pxToRem(20);
  font-weight: 500;
- line-height: 160%; /* 32px */
+ line-height: 160%; 
  letter-spacing: f.pxToRem(1);
 
  @include m.mq('sp') {
@@ -43,8 +46,12 @@
   padding-top: f.pxToRem(40);
 }
 
-.swiper-slide {
+.p-fv__card {
   max-width: f.pxToRem(540);
+  background: #fff;
+  padding: f.pxToRem(28);
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 /0.02);
 
   @include m.mq('sp'){
     max-width: f.pxToRem(270);
@@ -93,5 +100,31 @@
   @include m.mq('sp'){
     left: auto;
     right: f.pxToRem(16);
+  } 
+}
+
+/* ===============================================
+新着情報
+=============================================== */
+.p-latest__title {
+  justify-content: center;
+}
+
+.p-latest-card__wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+  grid-template-rows: auto;
+  gap: 64px 6%;
+}
+
+.p-latest-card__wrap {
+  padding: clamp(2rem, 1.648rem + 1.5vw, 3rem) 0;
+}
+
+.p-latest-button__wrap {
+  text-align: center;
+
+  @include m.mq('sp'){
+    text-align: right;
   } 
 }

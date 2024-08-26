@@ -214,7 +214,19 @@ CTA
 トップページ
 =============================================== */
 .l-fv {
-  padding-top: 12.5rem;
+  padding: 12.5rem 0 3rem;
+}
+@media screen and ( max-width: 759px ) {
+  .l-fv {
+    padding-bottom: 3.625rem;
+  }
+}
+
+/* ===============================================
+新着情報
+=============================================== */
+.l-latest {
+  padding: 2.5rem 0;
 }
 
 /* ===============================================
@@ -458,6 +470,57 @@ CTA
   background: #DAEFF8;
   color: #333;
   display: inline-block;
+}
+
+/* ===============================================
+見出し
+=============================================== */
+.c-section__title {
+  color: #135097;
+  text-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
+  font-family: "Zen Maru Gothic", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+@media screen and ( max-width: 759px ) {
+  .c-section__title {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+/* ===============================================
+もっとみるボタン
+=============================================== */
+.c-more__button {
+  padding: 0.5rem 1.75rem;
+  display: inline-block;
+  border-radius: 20px 20px 0px 20px;
+  background: var(--blue, #135097);
+  -webkit-box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.1);
+  color: #FFF;
+  font-family: "Zen Maru Gothic", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 180%;
+  letter-spacing: 0.25rem;
+}
+@media screen and ( max-width: 759px ) {
+  .c-more__button {
+    font-size: 1.125rem;
+    line-height: 180%;
+    letter-spacing: 0.225rem;
+  }
 }
 
 .p-header__logo--top {
@@ -706,9 +769,9 @@ CTA
 /* ===============================================
 カード
 =============================================== */
-.p-fv__card {
+.p-card {
   background: #fff;
-  padding: 1.75rem;
+  padding: 1rem;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
@@ -747,6 +810,7 @@ CTA
   font-size: 0.8125rem;
   border-radius: 6px;
   margin-top: 0.5rem;
+  padding: 0.25rem 1rem;
 }
 
 .p-cta {
@@ -910,10 +974,13 @@ CTA
   }
 }
 
+/* ===============================================
+fv スライダー
+=============================================== */
 .p-fv-card__title {
   font-size: 1.25rem;
   font-weight: 500;
-  line-height: 160%; /* 32px */
+  line-height: 160%;
   letter-spacing: 0.0625rem;
 }
 @media screen and ( max-width: 759px ) {
@@ -955,11 +1022,16 @@ CTA
   padding-top: 2.5rem;
 }
 
-.swiper-slide {
+.p-fv__card {
   max-width: 33.75rem;
+  background: #fff;
+  padding: 1.75rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
 }
 @media screen and ( max-width: 759px ) {
-  .swiper-slide {
+  .p-fv__card {
     max-width: 16.875rem;
   }
 }
@@ -1012,5 +1084,34 @@ CTA
   .p-fv-swiper__button--next {
     left: auto;
     right: 1rem;
+  }
+}
+
+/* ===============================================
+新着情報
+=============================================== */
+.p-latest__title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.p-latest-card__wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+  grid-template-rows: auto;
+  gap: 64px 6%;
+}
+
+.p-latest-card__wrap {
+  padding: clamp(2rem, 1.648rem + 1.5vw, 3rem) 0;
+}
+
+.p-latest-button__wrap {
+  text-align: center;
+}
+@media screen and ( max-width: 759px ) {
+  .p-latest-button__wrap {
+    text-align: right;
   }
 }
