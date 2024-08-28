@@ -18,12 +18,6 @@ fv スライダー
  } 
 }
 
-.p-card-tag__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap:f.pxToRem(8);
-}
-
 .p-fv-card__category {
   font-size: f.pxToRem(18);
   padding: f.pxToRem(4) f.pxToRem(20);
@@ -56,11 +50,12 @@ fv スライダー
   @include m.mq('sp'){
     max-width: f.pxToRem(270);
   } 
-}
 
-.swiper-slide-active {
-  transform: translateY(-40px)!important;
-  transition: transform 1s ease !important;
+  
+  &.swiper-slide-active {
+    transform: translateY(-40px)!important;
+    transition: transform 1s ease !important;
+  }
 }
 
 .p-fv-swiper-button__wrap{
@@ -118,7 +113,11 @@ fv スライダー
 }
 
 .p-latest-card__wrap {
-  padding: clamp(2rem, 1.648rem + 1.5vw, 3rem) 0;
+  padding: f.pxToRem(48) 0;
+
+  @include m.mq('sp'){
+    padding: f.pxToRem(32) 0;
+  } 
 }
 
 .p-latest-button__wrap {
@@ -127,4 +126,93 @@ fv スライダー
   @include m.mq('sp'){
     text-align: right;
   } 
+}
+
+/* ===============================================
+おすすめ記事
+=============================================== */
+.p-recommend {
+  background-image: url("../img/recommend/recommend-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: f.pxToRem(592);
+}
+
+.p-recommend__title {
+  color: #fff;
+
+  img {
+    @include m.mq('sp'){
+      width: f.pxToRem(42);
+    } 
+  }
+}
+
+.p-recommend__head {
+  display: flex;
+  justify-content: space-between;
+  max-width: f.pxToRem(1040);
+  position: relative;
+
+  @include m.mq('sp'){
+    display: block;
+  } 
+}
+
+.p-recommend__button--prev,
+.p-recommend__button--next {
+  height: f.pxToRem(48);
+  width: f.pxToRem(48);
+  margin: 0;
+  
+  &::after {
+    display: none;
+  }
+  
+  &:hover {
+    
+    svg {
+      transition:all .3s ease;
+      fill: #fff;
+
+      
+      path {
+        fill: v.$color-primary;
+     }
+    }
+  }
+}
+
+.p-recommend__button--prev {
+  top: unset;
+  left: unset;
+  right: f.pxToRem(64);
+
+  @include m.mq('sp') {
+    top: f.pxToRem(56);
+    right: f.pxToRem(76);
+  }
+}
+
+.p-recommend__button--next{
+  right: 0;
+  top: unset;
+  left: unset;
+  
+  @include m.mq('sp') {
+    top: f.pxToRem(56);
+    right: f.pxToRem(16);
+  }
+}
+
+.p-recommend__wrap {
+  padding: f.pxToRem(36) 0;
+
+  @include m.mq('sp'){
+    padding: f.pxToRem(96) 0 f.pxToRem(24);
+  } 
+}
+
+.p-recommend__card {
+  max-width:  f.pxToRem(270);
 }

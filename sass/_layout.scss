@@ -132,3 +132,21 @@ CTA
 .l-latest {
   padding: f.pxToRem(40) 0;
 }
+
+/* ===============================================
+おすすめ記事
+=============================================== */
+.l-recommend {
+  padding: f.pxToRem(64) 0;
+
+  @include m.mq('sp') {
+    padding: f.pxToRem(40) 0;
+  } 
+}
+
+.l-recommend__inner {
+  padding-left: 14%;
+
+  @include m.mq('sp'){
+    padding-left: f.pxToRem(20);} 
+}

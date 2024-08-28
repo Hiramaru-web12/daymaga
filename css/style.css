@@ -230,6 +230,27 @@ CTA
 }
 
 /* ===============================================
+おすすめ記事
+=============================================== */
+.l-recommend {
+  padding: 4rem 0;
+}
+@media screen and ( max-width: 759px ) {
+  .l-recommend {
+    padding: 2.5rem 0;
+  }
+}
+
+.l-recommend__inner {
+  padding-left: 14%;
+}
+@media screen and ( max-width: 759px ) {
+  .l-recommend__inner {
+    padding-left: 1.25rem;
+  }
+}
+
+/* ===============================================
 ヘッダーのボタン
 =============================================== */
 .c-header__button--left {
@@ -813,6 +834,24 @@ CTA
   padding: 0.25rem 1rem;
 }
 
+.p-card-tag__list,
+.scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: pointer;
+}
+.p-card-tag__list::-webkit-scrollbar,
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .p-cta {
   background-image: url("../img/CTA/cta_bg-pc.png");
   background-repeat: no-repeat;
@@ -991,15 +1030,6 @@ fv スライダー
   }
 }
 
-.p-card-tag__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
 .p-fv-card__category {
   font-size: 1.125rem;
   padding: 0.25rem 1.25rem;
@@ -1035,8 +1065,7 @@ fv スライダー
     max-width: 16.875rem;
   }
 }
-
-.swiper-slide-active {
+.p-fv__card.swiper-slide-active {
   -webkit-transform: translateY(-40px) !important;
           transform: translateY(-40px) !important;
   -webkit-transition: -webkit-transform 1s ease !important;
@@ -1104,7 +1133,12 @@ fv スライダー
 }
 
 .p-latest-card__wrap {
-  padding: clamp(2rem, 1.648rem + 1.5vw, 3rem) 0;
+  padding: 3rem 0;
+}
+@media screen and ( max-width: 759px ) {
+  .p-latest-card__wrap {
+    padding: 2rem 0;
+  }
 }
 
 .p-latest-button__wrap {
@@ -1114,4 +1148,97 @@ fv スライダー
   .p-latest-button__wrap {
     text-align: right;
   }
+}
+
+/* ===============================================
+おすすめ記事
+=============================================== */
+.p-recommend {
+  background-image: url("../img/recommend/recommend-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 37rem;
+}
+
+.p-recommend__title {
+  color: #fff;
+}
+@media screen and ( max-width: 759px ) {
+  .p-recommend__title img {
+    width: 2.625rem;
+  }
+}
+
+.p-recommend__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 65rem;
+  position: relative;
+}
+@media screen and ( max-width: 759px ) {
+  .p-recommend__head {
+    display: block;
+  }
+}
+
+.p-recommend__button--prev,
+.p-recommend__button--next {
+  height: 3rem;
+  width: 3rem;
+  margin: 0;
+}
+.p-recommend__button--prev::after,
+.p-recommend__button--next::after {
+  display: none;
+}
+.p-recommend__button--prev:hover svg,
+.p-recommend__button--next:hover svg {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  fill: #fff;
+}
+.p-recommend__button--prev:hover svg path,
+.p-recommend__button--next:hover svg path {
+  fill: #629DE2;
+}
+
+.p-recommend__button--prev {
+  top: unset;
+  left: unset;
+  right: 4rem;
+}
+@media screen and ( max-width: 759px ) {
+  .p-recommend__button--prev {
+    top: 3.5rem;
+    right: 4.75rem;
+  }
+}
+
+.p-recommend__button--next {
+  right: 0;
+  top: unset;
+  left: unset;
+}
+@media screen and ( max-width: 759px ) {
+  .p-recommend__button--next {
+    top: 3.5rem;
+    right: 1rem;
+  }
+}
+
+.p-recommend__wrap {
+  padding: 2.25rem 0;
+}
+@media screen and ( max-width: 759px ) {
+  .p-recommend__wrap {
+    padding: 6rem 0 1.5rem;
+  }
+}
+
+.p-recommend__card {
+  max-width: 16.875rem;
 }
