@@ -826,6 +826,12 @@ CTA
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
   max-width: 16.875rem;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+.p-card:hover {
+  opacity: 0.8;
 }
 
 .p-card__img img {
@@ -1090,11 +1096,15 @@ fv スライダー
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
 }
 @media screen and ( max-width: 750px ) {
   .p-fv__card {
     max-width: 16.875rem;
   }
+}
+.p-fv__card:hover {
+  opacity: 0.8;
 }
 .p-fv__card.swiper-slide-active {
   -webkit-transform: translateY(-40px) !important;

@@ -46,10 +46,15 @@ fv スライダー
   padding: f.pxToRem(28);
   border-radius: 20px;
   box-shadow: 0px 0px 30px 0px rgb(0 0 0 /0.02);
+  cursor: pointer;
 
   @include m.mq('sp'){
     max-width: f.pxToRem(270);
   } 
+  
+  &:hover {
+   opacity: .8;
+  }
 
   
   &.swiper-slide-active {

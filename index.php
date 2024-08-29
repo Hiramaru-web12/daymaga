@@ -17,39 +17,40 @@
         <?php if ($pickup_query->have_posts()) : ?>
         <?php while($pickup_query->have_posts()) : ?>
         <?php $pickup_query->the_post(); ?>
-        <div class="swiper-slide p-fv__card">
-          <a href="<?php the_permalink(); ?>"></a>
-          <div class="p-card__img">
-            <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail(); ?>
-            <?php else : ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
-            <?php endif; ?>
-            <div class="p-card__body">
-              <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
-              <h1 class="p-card__title p-fv-card__title"><?php the_title(); ?></h1>
-              <?php
-                $this_category = get_the_category();
-                if($this_category) {
-                $this_category_color = get_field( 'color', 'category_' . $this_category[0]->term_id); 
-                $this_category_name  = $this_category[0]->name;
-                echo '<p class="p-card__category p-fv-card__category" style= "' . esc_attr(
-                   'color:' . $this_category_color . '; 
-                   border: 1px solid ' . $this_category_color) . ';">' . esc_html( $this_category_name ) . '</p>';
-                }?>
+        <a href="<?php the_permalink(); ?>">
+          <div class="swiper-slide p-fv__card">
+            <div class="p-card__img">
+              <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail(); ?>
+              <?php else : ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
+              <?php endif; ?>
+              <div class="p-card__body">
+                <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+                <h1 class="p-card__title p-fv-card__title"><?php the_title(); ?></h1>
+                <?php
+                  $this_category = get_the_category();
+                  if($this_category) {
+                  $this_category_color = get_field( 'color', 'category_' . $this_category[0]->term_id);
+                  $this_category_name  = $this_category[0]->name;
+                  echo '<p class="p-card__category p-fv-card__category" style= "' . esc_attr(
+                     'color:' . $this_category_color . ';
+                     border: 1px solid ' . $this_category_color) . ';">' . esc_html( $this_category_name ) . '</p>';
+                  }?>
+              </div>
             </div>
+            <?php $post_tags = get_the_tags(); ?>
+            <ul class="p-card-tag__list">
+              <?php if ($post_tags) : ?>
+              <?php foreach($post_tags as $tag) : ?>
+              <li class="p-card__tag c-tag"><a
+                  href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+              <?php endif; ?>
+            </ul>
           </div>
-          <?php $post_tags = get_the_tags(); ?>
-          <ul class="p-card-tag__list">
-            <?php if ($post_tags) : ?>
-            <?php foreach($post_tags as $tag) : ?>
-            <li class="p-card__tag c-tag"><a
-                href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
-            </li>
-            <?php endforeach; ?>
-            <?php endif; ?>
-          </ul>
-        </div>
+        </a>
         <?php endwhile; ?>
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
@@ -82,37 +83,38 @@
       <?php while($latest_query->have_posts()) : ?>
       <?php $latest_query->the_post(); ?>
       <div class="p-card">
-        <a href="<?php the_permalink(); ?>"></a>
-        <div class="p-card__img">
-          <?php if (has_post_thumbnail()) : ?>
-          <?php the_post_thumbnail(); ?>
-          <?php else : ?>
-          <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
-          <?php endif; ?>
-          <div class="p-card__body">
-            <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
-            <h1 class="p-card__title"><?php the_title(); ?></h1>
-            <?php
-                  $this_category = get_the_category();
-                  if($this_category) {
-                  $this_category_color = get_field( 'color', 'category_' . $this_category[0]->term_id);
-                  $this_category_name  = $this_category[0]->name;
-                  echo '<p class="p-card__category" style= "' . esc_attr(
-                     'color:' . $this_category_color . ';
-                     border: 1px solid ' . $this_category_color) . ';">' . esc_html( $this_category_name ) . '</p>';
-                  }?>
+        <a href="<?php the_permalink(); ?>">
+          <div class="p-card__img">
+            <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail(); ?>
+            <?php else : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
+            <?php endif; ?>
+            <div class="p-card__body">
+              <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+              <h1 class="p-card__title"><?php the_title(); ?></h1>
+              <?php
+                    $this_category = get_the_category();
+                    if($this_category) {
+                    $this_category_color = get_field( 'color', 'category_' . $this_category[0]->term_id);
+                    $this_category_name  = $this_category[0]->name;
+                    echo '<p class="p-card__category" style= "' . esc_attr(
+                       'color:' . $this_category_color . ';
+                       border: 1px solid ' . $this_category_color) . ';">' . esc_html( $this_category_name ) . '</p>';
+                    }?>
+            </div>
           </div>
-        </div>
-        <?php $post_tags = get_the_tags(); ?>
-        <ul class="p-card-tag__list">
-          <?php if ($post_tags) : ?>
-          <?php foreach($post_tags as $tag) : ?>
-          <li class="p-card__tag c-tag"><a
-              href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
-          </li>
-          <?php endforeach; ?>
-          <?php endif; ?>
-        </ul>
+          <?php $post_tags = get_the_tags(); ?>
+          <ul class="p-card-tag__list">
+            <?php if ($post_tags) : ?>
+            <?php foreach($post_tags as $tag) : ?>
+            <li class="p-card__tag c-tag"><a
+                href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+            </li>
+            <?php endforeach; ?>
+            <?php endif; ?>
+          </ul>
+        </a>
       </div>
       <?php endwhile; ?>
       <?php endif; ?>
@@ -163,17 +165,18 @@
         <?php while($pickup_query->have_posts()) : ?>
         <?php $pickup_query->the_post(); ?>
         <div class="swiper-slide p-recommend__card p-card">
-          <a href="<?php the_permalink(); ?>"></a>
-          <div class="p-card__img">
-            <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail(); ?>
-            <?php else : ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
-            <?php endif; ?>
-            <div class="p-card__body">
-              <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
-              <h1 class="p-card__title"><?php the_title(); ?></h1>
-              <?php
+          <a href="<?php the_permalink(); ?>">
+
+            <div class="p-card__img">
+              <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail(); ?>
+              <?php else : ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
+              <?php endif; ?>
+              <div class="p-card__body">
+                <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+                <h1 class="p-card__title"><?php the_title(); ?></h1>
+                <?php
                 $this_category = get_the_category();
                 if($this_category) {
                 $this_category_color = get_field( 'color', 'category_' . $this_category[0]->term_id); 
@@ -182,18 +185,19 @@
                    'color:' . $this_category_color . '; 
                    border: 1px solid ' . $this_category_color) . ';">' . esc_html( $this_category_name ) . '</p>';
                 }?>
+              </div>
             </div>
-          </div>
-          <?php $post_tags = get_the_tags(); ?>
-          <ul class="p-card-tag__list">
-            <?php if ($post_tags) : ?>
-            <?php foreach($post_tags as $tag) : ?>
-            <li class="p-card__tag c-tag"><a
-                href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
-            </li>
-            <?php endforeach; ?>
-            <?php endif; ?>
-          </ul>
+            <?php $post_tags = get_the_tags(); ?>
+            <ul class="p-card-tag__list">
+              <?php if ($post_tags) : ?>
+              <?php foreach($post_tags as $tag) : ?>
+              <li class="p-card__tag c-tag"><a
+                  href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+              <?php endif; ?>
+            </ul>
+          </a>
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
@@ -263,17 +267,18 @@
             <?php if ($query->have_posts()) : ?>
             <?php while($query->have_posts()) : $query->the_post(); ?>
             <div class="p-card">
-              <a href="<?php the_permalink(); ?>"></a>
-              <div class="p-card__img">
-                <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail(); ?>
-                <?php else : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
-                <?php endif; ?>
-                <div class="p-card__body">
-                  <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
-                  <h1 class="p-card__title"><?php the_title(); ?></h1>
-                  <?php
+              <a href="<?php the_permalink(); ?>">
+
+                <div class="p-card__img">
+                  <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail(); ?>
+                  <?php else : ?>
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
+                  <?php endif; ?>
+                  <div class="p-card__body">
+                    <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+                    <h1 class="p-card__title"><?php the_title(); ?></h1>
+                    <?php
                   $this_category = get_the_category();
                   if($this_category) {
                     $this_category_color = get_field( 'color', 'category_' . $this_category[0]->term_id);
@@ -282,18 +287,19 @@
                       'color:' . $this_category_color . ';
                       border: 1px solid ' . $this_category_color) . ';">' . esc_html( $this_category_name ) . '</p>';
                   }?>
+                  </div>
                 </div>
-              </div>
-              <?php $post_tags = get_the_tags(); ?>
-              <ul class="p-card-tag__list">
-                <?php if ($post_tags) : ?>
-                <?php foreach($post_tags as $tag) : ?>
-                <li class="p-card__tag c-tag"><a
-                    href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
-                </li>
-                <?php endforeach; ?>
-                <?php endif; ?>
-              </ul>
+                <?php $post_tags = get_the_tags(); ?>
+                <ul class="p-card-tag__list">
+                  <?php if ($post_tags) : ?>
+                  <?php foreach($post_tags as $tag) : ?>
+                  <li class="p-card__tag c-tag"><a
+                      href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+                  </li>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
+                </ul>
+              </a>
             </div>
             <?php endwhile; ?>
             <?php else : ?>
