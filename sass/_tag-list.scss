@@ -38,6 +38,7 @@
   padding: f.pxToRem(36) f.pxToRem(92);
   display: flex;
   flex-wrap: wrap;
+  gap: f.pxToRem(16);
 
   @include m.mq('sp') {
     padding: f.pxToRem(24) f.pxToRem(16);

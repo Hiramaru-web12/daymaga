@@ -507,6 +507,12 @@ CTA
   background: #DAEFF8;
   color: #333;
   display: inline-block;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.c-tag:hover {
+  background: #333;
+  color: #DAEFF8;
 }
 
 /* ===============================================
@@ -542,15 +548,17 @@ CTA
   padding: 0.5rem 1.75rem;
   display: inline-block;
   border-radius: 20px 20px 0px 20px;
-  background: var(--blue, #135097);
+  background: #135097;
   -webkit-box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.1);
-  color: #FFF;
+  color: #fff;
   font-family: "Zen Maru Gothic", serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 180%;
   letter-spacing: 0.25rem;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 @media screen and ( max-width: 750px ) {
   .c-more__button {
@@ -558,6 +566,11 @@ CTA
     line-height: 180%;
     letter-spacing: 0.225rem;
   }
+}
+.c-more__button:hover {
+  color: #135097;
+  background: #fff;
+  border: 1px solid #135097;
 }
 
 .p-header__logo--top {
@@ -1055,6 +1068,7 @@ CTA
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 1rem;
 }
 @media screen and ( max-width: 750px ) {
   .p-tag-list__wrap {
