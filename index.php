@@ -297,6 +297,10 @@
               </ul>
             </div>
             <?php endwhile; ?>
+            <?php else : ?>
+            <div class="p-card__block--prepared">
+              <p>投稿の準備中です。</p>
+            </div>
             <?php endif; ?>
           </div>
         </div>

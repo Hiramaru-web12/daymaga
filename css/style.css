@@ -1301,6 +1301,9 @@ fv スライダー
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1366,7 +1369,7 @@ fv スライダー
 @media screen and ( max-width: 750px ) {
   .p-tabs__item {
     border-radius: 0px 12px 12px 0px;
-    padding: 0.75rem 0.625rem 0.75rem 0.375rem;
+    padding: 0.75rem 0.5rem 0.75rem 0.25rem;
     border: 1px solid var(--tab-color);
     border-left: none;
     display: inline-block;
@@ -1456,6 +1459,8 @@ fv スライダー
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  width: 21.875rem;
+  margin: 0 auto;
 }
 .p-order__list--sp li {
   padding: 0 0.75rem;
@@ -1466,7 +1471,34 @@ fv スライダー
 .p-order__list--sp li.active {
   color: #135097;
 }
+@media screen and ( min-width: 1200px ) {
+  .p-order__list--sp {
+    display: none;
+  }
+}
+@media screen and ( min-width: 751px ) and ( max-width: 1199px ) {
+  .p-order__list--sp {
+    display: none;
+  }
+}
 
 .p-all-button__wrap {
   text-align: right;
+}
+
+.p-card__block--prepared {
+  background: #fff;
+  max-width: 62.5rem;
+  width: 100%;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.03), 0px 16px 30px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.03), 0px 16px 30px 0px rgba(0, 0, 0, 0.05);
+}
+.p-card__block--prepared p {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.025rem;
 }
