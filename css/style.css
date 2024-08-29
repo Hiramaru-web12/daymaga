@@ -882,38 +882,6 @@ CTA
   display: none;
 }
 
-.category-tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  padding: 0;
-}
-
-.category-tabs li {
-  margin-right: 10px;
-}
-
-.tab-link {
-  text-decoration: none;
-  padding: 5px 10px;
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.tab-link.active {
-  background-color: #333;
-  color: #fff;
-}
-
-.category-content {
-  display: none;
-}
-
-.category-content.active {
-  display: block;
-}
-
 .p-cta {
   background-image: url("../img/CTA/cta_bg-pc.png");
   background-repeat: no-repeat;

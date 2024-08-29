@@ -247,11 +247,12 @@ CTA
  display: inline-block;
  transition: 0.3s ease-out;
 
- &:hover {
-  background: v.$color-tag-text;
- color: v.$color-tag;
+  &:hover {
+   background: v.$color-tag-text;
+   color: v.$color-tag;
+   }
  }
-}
+
 
 /* ===============================================
 見出し
@@ -296,7 +297,7 @@ CTA
  font-size: f.pxToRem(18);
  line-height: 180%; 
  letter-spacing: f.pxToRem(3.6);
- } 
+ }
 
  &:hover {
   color: v.$color-accent;
@@ -304,4 +305,6 @@ CTA
   border: 1px solid v.$color-accent;
  }
 }
+
+
 

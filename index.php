@@ -61,8 +61,7 @@
       <div class="swiper-button-prev p-fv-swiper__button--prev"></div>
       <div class="swiper-button-next p-fv-swiper__button--next"></div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination p-fv-swiper__pagination"></div>
+
   </div>
 </section>
 

@@ -16,7 +16,7 @@
          $tags = get_tags(); // すべてのタグを取得
          foreach ($tags as $tag) : ?>
         <li>
-          <a href="<?php echo get_tag_link($tag->term_id); ?>" class="c-tag"
+          <a href="<?php echo get_tag_link($tag->term_id); ?>" class="c-tag --hover"
             title="<?php echo esc_attr($tag->name); ?>">
             <?php echo esc_html($tag->name); ?>
           </a>
