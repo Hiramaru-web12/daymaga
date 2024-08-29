@@ -2,8 +2,8 @@
 breakpoints
 =============================================== */
 $breakpoints: (
-  "sp" : "screen and ( max-width: 759px )",  
-  "tab": "screen and ( min-width: 760px ) and ( max-width: 1199px )",
+  "sp" : "screen and ( max-width: 750px )",  
+  "tab": "screen and ( min-width: 751px ) and ( max-width: 1199px )",
   "pc" : "screen and ( min-width: 1200px )",
 )!default;
 

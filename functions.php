@@ -12,4 +12,5 @@ function my_script_init() {
   wp_enqueue_script("my", get_template_directory_uri() . "/js/script.js", array("jquery"), filemtime(get_theme_file_path('js/script.js')), true);
  }
  add_action("wp_enqueue_scripts", "my_script_init");
+
  ?>

@@ -99,6 +99,122 @@ jQuery.prototype.mousedragscrollable = function () {
       return false;
     });
 };
-$(".scroll").mousedragscrollable();
+  jQuery(".scroll").mousedragscrollable();
 
+// カテゴリータブの切り替え、ウィンドウサイズで表示数を可変
+  jQuery(document).ready(function($) {
+    const $tabs = jQuery('.p-tabs__item');jQuery(document).ready(function($) {
+    const $tabs = jQuery('.p-tabs__item');
+    const $tabContents = jQuery('.p-tabs__pane');
+  
+    function adjustCardDisplay() {
+      const windowWidth = jQuery(window).width();
+      let visibleCards;
+  
+      if (windowWidth >= 950) {
+        visibleCards = 9;
+      } else if (windowWidth >= 750) {
+        visibleCards = 6;
+      } else {
+        visibleCards = 6; // 750px未満でも6枚表示
+      }
+  
+      jQuery('.p-card-category__wrap').each(function() {
+        jQuery(this).find('.p-card').slice(visibleCards).hide(); // 指定枚数を超えたカードを非表示
+        jQuery(this).find('.p-card').slice(0, visibleCards).show(); // 表示するカードを表示
+      });
+    }
+  
+    $tabs.on('click', function() {
+      const category = jQuery(this).data('category');
+      const tabColor = jQuery(this).css('--tab-color');
+  
+      $tabs.removeClass('active');
+      jQuery(this).addClass('active');
+  
+      $tabContents.removeClass('active');
+      const $activePane = jQuery(`#${category}`);
+      $activePane.addClass('active');
+  
+      // 背景色を更新
+      $activePane.find('.p-card-category__wrap').css('background-color', tabColor);
+  
+      // カードの表示を調整
+      adjustCardDisplay();
+    });
+  
+    // 初期表示時の設定
+    adjustCardDisplay();
+    jQuery('.p-tabs__item.active').trigger('click');
+  
+    // ウィンドウリサイズ時の処理
+    jQuery(window).on('resize', adjustCardDisplay);
+  });
+  const $tabContents = jQuery('.p-tabs__pane');
+
+  $tabs.on('click', function() {
+    const category = jQuery(this).data('category');
+    const tabColor = jQuery(this).css('--tab-color');
+    
+    $tabs.removeClass('active');
+    $(this).addClass('active');
+    
+    $tabContents.removeClass('active');
+    const $activePane = jQuery(`#${category}`);
+    $activePane.addClass('active');
+
+    // 背景色を更新
+    $activePane.find('.p-card-category__wrap').css('background-color', tabColor);
+  });
+
+  // 初期表示時の背景色設定
+  jQuery('.p-tabs__item.active').trigger('click');
+});
+
+// 最大表示枚数をウィンドウサイズによって可変
+jQuery(document).ready(function($) {
+  const $tabs = $('.p-tabs__item');
+  const $tabContents = $('.p-tabs__pane');
+
+  function adjustCardDisplay() {
+    const windowWidth = $(window).width();
+    let visibleCards;
+
+    if (windowWidth >= 950) {
+      visibleCards = 9;
+    } else if (windowWidth >= 750) {
+      visibleCards = 6;
+    } else {
+      visibleCards = 6;
+    }
+
+    $('.p-card-category__wrap').each(function() {
+      $(this).find('.p-card').slice(visibleCards).hide();
+      $(this).find('.p-card').slice(0, visibleCards).show();
+    });
+  }
+
+  $tabs.on('click', function() {
+    const category = $(this).data('category');
+    const tabColor = $(this).css('--tab-color');
+    
+    $tabs.removeClass('active');
+    $(this).addClass('active');
+    
+    $tabContents.removeClass('active');
+    const $activePane = $(`#${category}`);
+    $activePane.addClass('active');
+
+    $activePane.find('.p-card-category__wrap').css('background-color', tabColor);
+
+    adjustCardDisplay();
+  });
+
+  // 初期表示時の設定
+  adjustCardDisplay();
+  $('.p-tabs__item.active').trigger('click');
+
+  // ウィンドウリサイズ時の処理
+  $(window).on('resize', adjustCardDisplay);
+});
 });

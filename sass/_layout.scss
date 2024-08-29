@@ -150,3 +150,19 @@ CTA
   @include m.mq('sp'){
     padding-left: f.pxToRem(20);} 
 }
+
+
+/* ===============================================
+すべての記事
+=============================================== */
+.l-all {
+  padding-top: f.pxToRem(64);
+}
+
+.l-tabs {
+  padding: f.pxToRem(48) 0 f.pxToRem(32);
+
+  @include m.mq('sp'){
+    padding: f.pxToRem(8) 0 f.pxToRem(20);
+  } 
+}
