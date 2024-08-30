@@ -32,7 +32,7 @@ jQuery(function(){
   
   });
 
-  const swiper = new Swiper('.p-recommend-swiper', {
+  const swiper2 = new Swiper('.p-recommend-swiper', {
     // Optional parameters
     loop: true,
     loopAdditionalSlides: 1,
@@ -47,6 +47,29 @@ jQuery(function(){
     navigation: {
       nextEl: '.p-recommend__button--next',
       prevEl: '.p-recommend__button--prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+
+  const swiper3 = new Swiper('.p-entry-recommend-swiper', {
+    // Optional parameters
+    loop: true,
+    loopAdditionalSlides: 1,
+    spaceBetween: 32,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.p-entry-recommend__button--next',
+      prevEl: '.p-entry-recommend__button--prev',
     },
   
     // And if we need scrollbar

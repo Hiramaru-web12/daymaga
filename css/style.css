@@ -1755,3 +1755,55 @@ fv スライダー
     gap: 0.5rem;
   }
 }
+
+/* ===============================================
+投稿ページのおすすめ記事
+=============================================== */
+.p-entry-recommend__title {
+  color: #135097;
+}
+
+.p-entry-recommend__button--prev,
+.p-entry-recommend__button--next {
+  height: 3rem;
+  width: 3rem;
+  margin: 0;
+}
+.p-entry-recommend__button--prev::after,
+.p-entry-recommend__button--next::after {
+  display: none;
+}
+.p-entry-recommend__button--prev:hover svg,
+.p-entry-recommend__button--next:hover svg {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  fill: #135097;
+}
+.p-entry-recommend__button--prev:hover svg path,
+.p-entry-recommend__button--next:hover svg path {
+  fill: #fff;
+}
+
+.p-entry-recommend__button--prev {
+  top: unset;
+  left: unset;
+  right: 4rem;
+}
+@media screen and ( max-width: 750px ) {
+  .p-entry-recommend__button--prev {
+    top: 3.5rem;
+    right: 4.75rem;
+  }
+}
+
+.p-entry-recommend__button--next {
+  right: 0;
+  top: unset;
+  left: unset;
+}
+@media screen and ( max-width: 750px ) {
+  .p-entry-recommend__button--next {
+    top: 3.5rem;
+    right: 1rem;
+  }
+}

@@ -211,3 +211,57 @@ td {
     gap: f.pxToRem(8);
   } 
 }
+
+/* ===============================================
+投稿ページのおすすめ記事
+=============================================== */
+.p-entry-recommend__title {
+ color: v.$color_accent;
+}
+
+.p-entry-recommend__button--prev,
+.p-entry-recommend__button--next {
+  height: f.pxToRem(48);
+  width: f.pxToRem(48);
+  margin: 0;
+  
+  &::after {
+    display: none;
+  }
+  
+  &:hover {
+    
+    svg {
+      transition:all .3s ease;
+      fill: v.$color-accent;
+
+      
+      path {
+        fill: #fff;
+     }
+    }
+  }
+}
+
+.p-entry-recommend__button--prev {
+  top: unset;
+  left: unset;
+  right: f.pxToRem(64);
+
+  @include m.mq('sp') {
+    top: f.pxToRem(56);
+    right: f.pxToRem(76);
+  }
+}
+
+
+.p-entry-recommend__button--next{
+  right: 0;
+  top: unset;
+  left: unset;
+  
+  @include m.mq('sp') {
+    top: f.pxToRem(56);
+    right: f.pxToRem(16);
+  }
+}
