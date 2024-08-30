@@ -57,7 +57,7 @@
 
 
 
-<?php get_template_part('template-parts/single-recommend'); ?>
+<?php get_template_part('template-parts/entry-recommend'); ?>
 
 <?php get_template_part('template-parts/tag-list'); ?>
 <?php get_template_part('template-parts/cta'); ?>
