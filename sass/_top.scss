@@ -21,6 +21,8 @@ fv スライダー
 .p-fv-card__category {
   font-size: f.pxToRem(18);
   padding: f.pxToRem(4) f.pxToRem(20);
+  display: inline-block;
+  border-radius: 6px;
 
   @include m.mq('sp'){
     font-size: f.pxToRem(13);

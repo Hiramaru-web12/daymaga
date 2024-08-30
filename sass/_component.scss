@@ -232,6 +232,11 @@ CTA
     font-size: f.pxToRem(15);
     letter-spacing: 1.12px;
   }
+
+  &:hover {
+    opacity: .8;
+    transform: translateY(8px); 
+  }
 }
 
 /* ===============================================
@@ -306,5 +311,31 @@ CTA
  }
 }
 
+/* ===============================================
+投稿ページボタン
+=============================================== */
+.c-entry__button {
+ padding: f.pxToRem(14) f.pxToRem(30);
+ text-align: center;
+ border-radius: 16px;
+ border: 2px solid #fff;
+ background: v.$color-primary;
+ color: #fff;
+ font-size: f.pxToRem(24);
+ font-weight: 500;
+ line-height: 130%; 
+ letter-spacing: f.pxToRem(1.92);
+ transition: .3s ease-out;
+
+@include m.mq('sp'){
+ font-size: f.pxToRem(14);
+ letter-spacing: f.pxToRem(1.12);
+ } 
+
+ &:hover {
+  opacity: .8;
+  transform: translateY(8px); 
+}
+}
 
 

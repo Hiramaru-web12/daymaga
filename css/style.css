@@ -267,6 +267,19 @@ CTA
 }
 
 /* ===============================================
+投稿ページ
+=============================================== */
+.l-entry {
+  padding-top: 12.5rem;
+}
+
+@media screen and ( max-width: 750px ) {
+  .l-entry__inner {
+    padding: 0;
+  }
+}
+
+/* ===============================================
 ヘッダーのボタン
 =============================================== */
 .c-header__button--left {
@@ -495,6 +508,11 @@ CTA
     letter-spacing: 1.12px;
   }
 }
+.c-page404__button:hover {
+  opacity: 0.8;
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
 
 /* ===============================================
 タグ
@@ -571,6 +589,35 @@ CTA
   color: #135097;
   background: #fff;
   border: 1px solid #135097;
+}
+
+/* ===============================================
+投稿ページボタン
+=============================================== */
+.c-entry__button {
+  padding: 0.875rem 1.875rem;
+  text-align: center;
+  border-radius: 16px;
+  border: 2px solid #fff;
+  background: #629DE2;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.12rem;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+@media screen and ( max-width: 750px ) {
+  .c-entry__button {
+    font-size: 0.875rem;
+    letter-spacing: 0.07rem;
+  }
+}
+.c-entry__button:hover {
+  opacity: 0.8;
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
 }
 
 .p-header__logo--top {
@@ -875,7 +922,6 @@ CTA
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   gap: 0.5rem;
   white-space: nowrap;
   overflow-x: auto;
@@ -1070,6 +1116,8 @@ fv スライダー
 .p-fv-card__category {
   font-size: 1.125rem;
   padding: 0.25rem 1.25rem;
+  display: inline-block;
+  border-radius: 6px;
 }
 @media screen and ( max-width: 750px ) {
   .p-fv-card__category {
@@ -1493,4 +1541,217 @@ fv スライダー
   font-weight: 500;
   line-height: 140%;
   letter-spacing: 0.025rem;
+}
+
+.p-entry {
+  background: #fff;
+  border-radius: 24px;
+  padding: 2.75rem 5.5rem;
+}
+@media screen and ( max-width: 750px ) {
+  .p-entry {
+    padding: 1.25rem 1.25rem 3rem;
+  }
+}
+
+.p-entry__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.p-entry__published {
+  color: #676E87;
+  font-size: 1rem;
+  line-height: 180%;
+}
+.p-entry__published span {
+  padding-right: 1rem;
+}
+
+.p-entry__title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0.175rem;
+}
+@media screen and ( max-width: 750px ) {
+  .p-entry__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.125rem;
+  }
+}
+
+.p-entry__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+.p-entry__body #toc_container {
+  max-width: 26.8125rem;
+}
+.p-entry__body #toc_container p.toc_title {
+  font-size: clamp(1rem, 0.912rem + 0.38vw, 1.25rem);
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: clamp(0.087rem, 0.074rem + 0.06vw, 0.125rem);
+  background: #E6EDF3;
+  padding: 0.5rem 1rem;
+}
+.p-entry__body #toc_container ul {
+  color: #135097;
+}
+.p-entry__body #toc_container ul li a {
+  line-height: 160%;
+  letter-spacing: 1.8px;
+  text-decoration-line: underline;
+}
+.p-entry__body h2 {
+  font-size: clamp(1.25rem, 1.162rem + 0.38vw, 1.5rem);
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: clamp(0.188rem, 0.174rem + 0.06vw, 0.225rem);
+  border-bottom: 2px solid #629DE2;
+  padding: 1rem 0;
+}
+.p-entry__body h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.2rem;
+  border-left: 2px solid #629DE2;
+  padding-left: 1rem;
+}
+.p-entry__body h4 {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.1875rem;
+  position: relative;
+  padding-left: 1.875rem;
+}
+.p-entry__body h4:before {
+  position: absolute;
+  content: "";
+  width: 1.25rem;
+  height: 0.125rem;
+  background: #629DE2;
+  top: 0.75rem;
+  left: 0;
+}
+.p-entry__body .wp-block-list {
+  padding-left: 20px;
+}
+.p-entry__body .wp-block-list li {
+  line-height: 200%;
+  letter-spacing: 0.140625rem;
+}
+.p-entry__body .wp-block-list li::before {
+  content: "";
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background-color: #629DE2;
+  margin-right: 1.25rem;
+  vertical-align: middle;
+}
+.p-entry__body #tablepress-1 {
+  border: 1px solid #629DE2;
+}
+.p-entry__body #tablepress-1 caption {
+  display: none;
+}
+.p-entry__body #tablepress-1 th {
+  background: #629DE2;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(0.813rem, 0.746rem + 0.28vw, 1rem);
+  line-height: 150%;
+}
+.p-entry__body #tablepress-1 td {
+  border: 1px solid #629DE2;
+  color: #343436;
+  text-align: center;
+  font-size: clamp(0.813rem, 0.746rem + 0.28vw, 1rem);
+  line-height: 150%;
+}
+.p-entry__body p {
+  font-size: 0.9375rem;
+  line-height: 200%;
+  letter-spacing: 0.140625rem;
+}
+@media screen and ( max-width: 750px ) {
+  .p-entry__body p {
+    font-size: 0.875rem;
+    line-height: 180%;
+    letter-spacing: 0.0875rem;
+  }
+}
+
+.p-entry__box {
+  background: #E6EDF3;
+  border: 1px solid #629DE2;
+  padding: 1.25rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 200%;
+  letter-spacing: 0.15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+}
+@media screen and ( max-width: 750px ) {
+  .p-entry__box {
+    line-height: 160%;
+  }
+}
+.p-entry__box a {
+  color: #135097;
+  text-decoration-line: underline;
+}
+
+.p-entry__bottom {
+  border-top: 1px solid #E6EDF3;
+  padding-top: 1.25rem;
+  margin-top: clamp(1.25rem, 0.986rem + 1.13vw, 2rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+.p-entry__bottom p {
+  font-size: 0.9375rem;
+  line-height: 200%;
+  letter-spacing: 0.140625rem;
+}
+@media screen and ( max-width: 750px ) {
+  .p-entry__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    gap: 0.5rem;
+  }
 }

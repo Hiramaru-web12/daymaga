@@ -1,0 +1,213 @@
+@use 'variable' as v;
+@use 'mixin' as m;
+@use 'function' as f;
+
+.p-entry {
+  background: #fff;
+  border-radius: 24px;
+  padding: f.pxToRem(44) f.pxToRem(88);
+
+  @include m.mq('sp'){
+    padding: f.pxToRem(20) f.pxToRem(20) f.pxToRem(48);
+  } 
+}
+
+.p-entry__header {
+  display: flex;
+  flex-direction: column;
+  gap: f.pxToRem(8);
+}
+
+.p-entry__published {
+  color: v.$color-text-gray;
+  font-size: f.pxToRem(16);
+  line-height: 180%; 
+  span {
+    padding-right: f.pxToRem(16);
+  }
+}
+
+.p-entry__title {
+ font-size: f.pxToRem(28);
+ font-weight: 500;
+ line-height: 180%; 
+ letter-spacing: f.pxToRem(2.8);
+
+@include m.mq('sp') {
+ font-size: f.pxToRem(20);
+ font-weight: 500;
+ line-height: 150%; 
+ letter-spacing: f.pxToRem(2);
+ } 
+}
+
+.p-entry__body {
+  display: flex;
+  flex-direction: column;
+  gap: f.pxToRem(20);
+
+  #toc_container {
+    max-width: f.pxToRem(429);
+
+    p {
+      &.toc_title {
+        font-size: clamp(1rem, 0.912rem + 0.38vw, 1.25rem);
+        font-weight: 500;
+        line-height: 180%; 
+        letter-spacing: clamp(0.087rem, 0.074rem + 0.06vw, 0.125rem) ;
+        background: v.$color-bg;
+        padding: f.pxToRem(8) f.pxToRem(16);
+       }
+    }
+
+    ul {
+      color: v.$color-accent;
+
+      li a {
+        line-height: 160%; 
+        letter-spacing: 1.8px;
+        text-decoration-line: underline;  
+      }
+    }
+  } 
+
+h2 {
+  font-size: clamp(1.25rem, 1.162rem + 0.38vw, 1.5rem);
+  font-weight: 500;
+  line-height: 160%; 
+  letter-spacing:clamp(0.188rem, 0.174rem + 0.06vw, 0.225rem);
+  border-bottom: 2px solid v.$color-primary;
+  padding: f.pxToRem(16) 0;
+}
+
+h3 {
+  font-size: f.pxToRem(16);
+  font-weight: 500;
+  line-height: 160%; 
+  letter-spacing: f.pxToRem(3.2);
+  border-left: 2px solid v.$color-primary;
+  padding-left: f.pxToRem(16);
+}
+
+h4 {
+  font-size: f.pxToRem(15);
+  font-weight: 500;
+  line-height: 160%; 
+  letter-spacing: f.pxToRem(3);
+  position: relative;
+  padding-left: f.pxToRem(30);
+ 
+  &:before {
+    position: absolute;
+    content: "";
+    width: f.pxToRem(20);
+    height: f.pxToRem(2);
+    background: v.$color-primary;
+    top: f.pxToRem(12);
+    left: 0;
+  }
+}
+
+.wp-block-list {
+  padding-left: 20px;
+
+  li {
+    line-height: 200%; 
+    letter-spacing: f.pxToRem(2.25);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: f.pxToRem(4);
+      height: f.pxToRem(4);
+      border-radius: 50%;
+      background-color: v.$color-primary;
+      margin-right: f.pxToRem(20);
+      vertical-align: middle;
+    }
+  }
+}
+
+
+ #tablepress-1 {
+  border: 1px solid v.$color-primary;
+
+  caption {
+    display: none;
+ }
+ 
+
+th {
+  background: v.$color-primary;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(0.813rem, 0.746rem + 0.28vw, 1rem);
+  line-height: 150%; 
+}
+
+td {
+  border: 1px solid v.$color-primary;
+  color: v.$color-text-black;
+  text-align: center;
+  font-size: clamp(0.813rem, 0.746rem + 0.28vw, 1rem);
+  line-height: 150%; 
+ }
+
+}
+
+ p {
+   font-size:f.pxToRem(15);
+   line-height: 200%; 
+   letter-spacing: f.pxToRem(2.25);
+
+   @include m.mq('sp') {
+   font-size: f.pxToRem(14);
+   line-height: 180%; 
+   letter-spacing: f.pxToRem(1.4);
+   } 
+ }
+
+}
+ 
+.p-entry__box {
+  background: v.$color-bg;
+  border: 1px solid v.$color-primary;
+  padding: f.pxToRem(20) f.pxToRem(28);
+  font-size: f.pxToRem(16);
+  font-weight: 500;
+  line-height: 200%; 
+  letter-spacing: f.pxToRem(2.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: f.pxToRem(10);
+
+  @include m.mq('sp'){
+    line-height: 160%; 
+  } 
+
+  a {
+    color: v.$color-accent;
+    text-decoration-line: underline;
+  }
+}
+
+.p-entry__bottom {
+  border-top: 1px solid v.$color-bg;
+  padding-top: f.pxToRem(20);
+  margin-top: clamp(1.25rem, 0.986rem + 1.13vw, 2rem);
+  display: flex;
+  gap: f.pxToRem(32);
+
+  p {
+    font-size: f.pxToRem(15);
+    line-height: 200%; 
+    letter-spacing: f.pxToRem(2.25);
+  }
+
+  @include m.mq('sp'){
+    flex-flow: column wrap;
+    gap: f.pxToRem(8);
+  } 
+}

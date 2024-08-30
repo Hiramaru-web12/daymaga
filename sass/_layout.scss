@@ -166,3 +166,16 @@ CTA
     padding: f.pxToRem(8) 0 f.pxToRem(20);
   } 
 }
+
+/* ===============================================
+投稿ページ
+=============================================== */
+.l-entry {
+  padding-top: f.pxToRem(200);
+}
+
+.l-entry__inner {
+  @include m.mq('sp'){
+    padding: 0;
+  } 
+}
