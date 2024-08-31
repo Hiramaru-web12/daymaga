@@ -41,7 +41,6 @@
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tips'))); ?>"> TIPS</a></li>
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('interview'))); ?>">インタビュー</a></li>
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('news'))); ?>">ニュース</a></li>
-
         </ul>
         <div class="p-header-button__wrap is-pc">
           <button class="c-header__button--left">
@@ -74,10 +73,10 @@
     <div class="l-drawer p-drawer is-sp">
       <div class="l-drawer__inner">
         <ul class="p-drawer__nav">
-          <li><a href="">新着情報</a></li>
-          <li><a href="">TIPS</a></li>
-          <li><a href="">インタビュー</a></li>
-          <li><a href="">ニュース</a></li>
+          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('new'))); ?>">新着情報</a></li>
+          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tips'))); ?>"> TIPS</a></li>
+          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('interview'))); ?>">インタビュー</a></li>
+          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('news'))); ?>">ニュース</a></li>
           <li><a href=""><img src="<?php echo get_template_directory_uri(  ); ?>/img/header/tabler_search.svg"
                 alt="search"></a></li>
         </ul>
