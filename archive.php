@@ -72,7 +72,8 @@
                         echo '<p class="p-card__category" style= "' . esc_attr(
                           'color:' . $this_category_color . ';
                           border: 1px solid ' . $this_category_color) . ';">' . esc_html( $this_category_name ) . '</p>';
-                      }?>
+                      }
+                      ?>
                   </div>
                 </div>
                 <?php $post_tags = get_the_tags(); ?>
@@ -101,9 +102,9 @@
         </div>
       </div>
     </div>
-
-    <?php get_template_part( 'template-parts/pagination'); ?>
   </div>
+
+  <?php get_template_part( 'template-parts/pagination'); ?>
 </section>
 
 <?php get_template_part('template-parts/tag-list');?>
