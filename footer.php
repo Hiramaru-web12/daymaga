@@ -7,16 +7,16 @@
       </div>
       <div class="p-footer-nav__wrap">
         <ul class="p-footer__nav p-footer__nav--right">
-          <li><a href="">新着情報</a></li>
-          <li><a href="">TIPS</a></li>
-          <li><a href="">インタビュー</a></li>
-          <li><a href="">ニュース</a></li>
+          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('new'))); ?>">新着情報</a></li>
+          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tips'))); ?>">TIPS</a></li>
+          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('interview'))); ?>">インタビュー</a></li>
+          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('news'))); ?>">ニュース</a></li>
         </ul>
 
         <ul class="p-footer__nav p-footer__nav--right">
-          <li><a href="">DayMagaについて</a></li>
-          <li><a href="">運営会社</a></li>
-          <li><a href="">サイト利用規約</a></li>
+          <li><a href="#">DayMagaについて</a></li>
+          <li><a href="#">運営会社</a></li>
+          <li><a href="#">サイト利用規約</a></li>
         </ul>
       </div>
     </div>
