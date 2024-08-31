@@ -121,7 +121,7 @@
       <?php wp_reset_postdata(); ?>
     </div>
     <div class="p-latest-button__wrap">
-      <a href="" class="c-more__button">もっとみる</a>
+      <a href="<?php echo esc_url(get_category_link(get_category_by_slug('new'))); ?>" class="c-more__button">もっとみる</a>
     </div>
   </div>
 </section>
@@ -315,10 +315,11 @@
     </div>
 
     <div class="p-all-button__wrap">
-      <a href="" class="c-more__button">もっとみる</a>
+      <a href="<?php echo esc_url(home_url('/'));?>all/" class="c-more__button">もっとみる</a>
     </div>
   </div>
 </section>
+
 
 <?php get_template_part('template-parts/tag-list');?>
 
