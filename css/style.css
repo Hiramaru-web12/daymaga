@@ -1396,6 +1396,10 @@ fv スライダー
 /* ===============================================
 すべての記事
 =============================================== */
+.p-all__title {
+  padding-bottom: 2.5rem;
+}
+
 @media screen and ( max-width: 750px ) {
   .p-tabs {
     display: -webkit-box;
@@ -1605,6 +1609,15 @@ fv スライダー
   font-weight: 500;
   line-height: 140%;
   letter-spacing: 0.025rem;
+}
+
+.p-all-button__wrap {
+  padding-top: 2.5rem;
+}
+@media screen and ( max-width: 750px ) {
+  .p-all-button__wrap {
+    padding-top: 1.25rem;
+  }
 }
 
 .p-entry {

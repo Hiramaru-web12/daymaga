@@ -223,6 +223,10 @@ fv スライダー
 /* ===============================================
 すべての記事
 =============================================== */
+.p-all__title {
+  padding-bottom: f.pxToRem(40);
+}
+
 .p-tabs {
   @include m.mq('sp'){
     display: flex;
@@ -328,7 +332,6 @@ fv スライダー
 }
 
 .p-order__list {
-  
   display: flex;
   color: v.$color-text-gray;
   font-size: f.pxToRem(18);
@@ -406,3 +409,10 @@ fv スライダー
     letter-spacing: f.pxToRem(0.4);
   }
 }
+
+.p-all-button__wrap {
+  padding-top: f.pxToRem(40);
+
+  @include m.mq('sp'){
+    padding-top: f.pxToRem(20);
+  } }
