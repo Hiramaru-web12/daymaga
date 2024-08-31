@@ -251,14 +251,14 @@ CTA
 }
 
 /* ===============================================
-すべての記事
+すべての記事(トップページ）
 =============================================== */
 .l-all {
   padding-top: 4rem;
 }
 
 .l-tabs {
-  padding: 3rem 0 2rem;
+  padding-top: 3rem 0 2rem;
 }
 @media screen and ( max-width: 750px ) {
   .l-tabs {
@@ -277,6 +277,32 @@ CTA
   .l-entry__inner {
     padding: 0;
   }
+}
+
+/* ===============================================
+すべての記事(下層）
+=============================================== */
+.l-lower-all {
+  padding-top: 12.5rem;
+}
+
+.l-pagiNav {
+  padding-top: 3.5rem;
+}
+@media screen and ( max-width: 750px ) {
+  .l-pagiNav {
+    padding-top: 2rem;
+  }
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
 }
 
 /* ===============================================
@@ -932,6 +958,44 @@ CTA
 .p-card-tag__list::-webkit-scrollbar,
 .scroll::-webkit-scrollbar {
   display: none;
+}
+
+/* ===============================================
+ページネーション
+=============================================== */
+.page-numbers {
+  font-size: 0.875rem;
+  border-radius: 4px;
+  width: 1.75rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #629DE2;
+  line-height: 2.25rem;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.page-numbers a {
+  display: block;
+  width: 100%;
+}
+.page-numbers:hover {
+  opacity: 0.8;
+}
+.page-numbers.current {
+  background: #629DE2;
+  color: #fff;
 }
 
 .p-cta {

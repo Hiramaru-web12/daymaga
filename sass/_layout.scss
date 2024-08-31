@@ -153,14 +153,14 @@ CTA
 
 
 /* ===============================================
-すべての記事
+すべての記事(トップページ）
 =============================================== */
 .l-all {
   padding-top: f.pxToRem(64);
 }
 
 .l-tabs {
-  padding: f.pxToRem(48) 0 f.pxToRem(32);
+  padding-top: f.pxToRem(48) 0 f.pxToRem(32);
 
   @include m.mq('sp'){
     padding: f.pxToRem(8) 0 f.pxToRem(20);
@@ -178,4 +178,25 @@ CTA
   @include m.mq('sp'){
     padding: 0;
   } 
+}
+
+/* ===============================================
+すべての記事(下層）
+=============================================== */
+.l-lower-all {
+  padding-top: f.pxToRem(200) ;
+}
+
+.l-pagiNav {
+  padding-top: f.pxToRem(56);
+
+  @include m.mq('sp'){
+    padding-top: f.pxToRem(32);
+  } 
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: f.pxToRem(10);
 }

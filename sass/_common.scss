@@ -68,7 +68,6 @@
  padding: f.pxToRem(4) f.pxToRem(16);
 }
 
-
 .p-card-tag__list,
 .scroll {
   display: flex;
@@ -83,3 +82,35 @@
       display: none;
   }
 }
+
+/* ===============================================
+ページネーション
+=============================================== */
+.page-numbers {
+  font-size: f.pxToRem(14);
+  border-radius: 4px;
+  width: f.pxToRem(28);
+  height: f.pxToRem(32);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: v.$color-primary;
+  line-height: f.pxToRem(36); 
+  transition: .3s ease-out;
+
+  a {
+    display: block;
+    width: 100%;
+  }
+  
+  &:hover {
+    opacity: .8;
+  }
+
+  &.current {
+    background: v.$color-primary;
+    color: #fff;
+  }
+}  
+
