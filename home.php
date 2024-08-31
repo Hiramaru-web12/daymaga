@@ -1,4 +1,5 @@
-<?php get_header(); ?><section class="l-lower-all p-lower-all">
+<?php get_header(); ?>
+<section class="l-lower-all p-lower-all">
   <div class="l-all__inner l-inner">
     <h1 class="c-section__title p-all__title">
       <img src="<?php echo get_template_directory_uri(); ?>/img/common/logo.png" alt="ロゴ">すべての記事
