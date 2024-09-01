@@ -1,4 +1,4 @@
-<?php if(paginate_links()) : //ページが1ページ以上あれば以下を表示 ?>
+<?php if(paginate_links()) : ?>
 <!-- pagination -->
 <nav class="l-pagiNav pagination l-inner">
   <div class="nav-links">
