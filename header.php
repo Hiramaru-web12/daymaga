@@ -28,17 +28,17 @@
   <!-- header -->
   <header class="l-header p-header" id="js-header">
     <div class="l-header__inner">
-      <div class="p-header__logo--top ">
-        <img src="<?php echo get_template_directory_uri(  ); ?>/img/header/only-top.png"
-          alt="ビジネスの未来を切り拓く DayMaga コンサルティングの専門情報メディア">
+      <div class="p-header__logo--top "><a href="<?php echo esc_url(home_url('/')); ?>">
+          <img src="<?php echo get_template_directory_uri(  ); ?>/img/header/only-top.png"
+            alt="ビジネスの未来を切り拓く DayMaga コンサルティングの専門情報メディア"></a>
       </div>
-      <div class="p-header__logo--down">
-        <img src="<?php echo get_template_directory_uri(  ); ?>/img/header/logo.png" alt="DayMaga">
+      <div class="p-header__logo--down"><a href="<?php echo esc_url(home_url('/')); ?>">
+          <img src="<?php echo get_template_directory_uri(  ); ?>/img/header/logo.png" alt="DayMaga"></a>
       </div>
       <div class="p-header__nav">
         <ul class="p-header-nav__inner is-pc">
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('new'))); ?>">新着情報</a></li>
-          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tips'))); ?>"> TIPS</a></li>
+          <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tips'))); ?>">TIPS</a></li>
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('interview'))); ?>">インタビュー</a></li>
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('news'))); ?>">ニュース</a></li>
         </ul>
