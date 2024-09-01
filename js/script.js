@@ -1,4 +1,29 @@
-jQuery(function(){
+jQuery(function() {
+  // ヘッダーロゴの切り替え
+  var $header = jQuery('.l-header');
+  var $logoTop = jQuery('#js-logo--top');
+  var $logoDown = jQuery('#js-logo--down');
+  var scrollTrigger = 100; 
+  var fadespeed = 200; 
+
+  jQuery(window).scroll(function() {
+      if (jQuery(window).scrollTop() > scrollTrigger) {
+          if (!$header.hasClass('scrolled')) {
+              $header.addClass('scrolled');
+              $logoTop.fadeOut(fadespeed, function() {
+                  $logoDown.fadeIn(fadespeed);
+              });
+          }
+      } else {
+          if ($header.hasClass('scrolled')) {
+              $header.removeClass('scrolled');
+              $logoDown.fadeOut(fadespeed, function() {
+                  $logoTop.fadeIn(fadespeed);
+              });
+          }
+      }
+  });
+
   var swiper1 = new Swiper('.p-fv-swiper', {
     // Optional parameters
     loop: true,
@@ -125,7 +150,6 @@ jQuery.prototype.mousedragscrollable = function () {
   jQuery(".scroll").mousedragscrollable();
 
 // カテゴリータブの切り替え、ウィンドウサイズで表示数を可変
-  jQuery(document).ready(function($) {
     const $tabs = jQuery('.p-tabs__item');jQuery(document).ready(function($) {
     const $tabs = jQuery('.p-tabs__item');
     const $tabContents = jQuery('.p-tabs__pane');
@@ -174,4 +198,3 @@ jQuery.prototype.mousedragscrollable = function () {
     jQuery(window).on('resize', adjustCardDisplay);
   });
   });
-});

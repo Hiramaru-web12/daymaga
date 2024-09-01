@@ -657,7 +657,7 @@ CTA
   padding-left: clamp(1.25rem, 0.634rem + 2.63vw, 3rem);
   padding-top: 2rem;
 }
-.p-header__logo--top.is-scroll {
+.p-header__logo--top.scrolled {
   display: none;
 }
 
@@ -672,7 +672,7 @@ CTA
     width: 10rem;
   }
 }
-.p-header__logo--down.is-scroll {
+.p-header__logo--down.scrolled {
   display: block;
 }
 
@@ -694,7 +694,7 @@ CTA
   .p-header__nav {
     padding: 1.75rem 1.625rem;
   }
-  .p-header__nav.is-scroll {
+  .p-header__nav.scrolled {
     padding: 1.25rem 2rem 1.25rem 2.5rem;
   }
 }

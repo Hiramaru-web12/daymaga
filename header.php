@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head prefix="og: https://ogp.me/ns#">
+<head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="icon" href="<?php echo get_template_directory_uri(  ); ?>/img/favicon.svg" sizes="any"
@@ -26,13 +26,13 @@
 
 <body>
   <!-- header -->
-  <header class="l-header p-header" id="js-header">
+  <header class="l-header p-header">
     <div class="l-header__inner">
-      <div class="p-header__logo--top "><a href="<?php echo esc_url(home_url('/')); ?>">
+      <div class="p-header__logo--top" id="js-logo--top"><a href="<?php echo esc_url(home_url('/')); ?>">
           <img src="<?php echo get_template_directory_uri(  ); ?>/img/header/only-top.png"
             alt="ビジネスの未来を切り拓く DayMaga コンサルティングの専門情報メディア"></a>
       </div>
-      <div class="p-header__logo--down"><a href="<?php echo esc_url(home_url('/')); ?>">
+      <div class="p-header__logo--down" id="js-logo--down"><a href="<?php echo esc_url(home_url('/')); ?>">
           <img src="<?php echo get_template_directory_uri(  ); ?>/img/header/logo.png" alt="DayMaga"></a>
       </div>
       <div class="p-header__nav">

@@ -6,7 +6,7 @@
   padding-left: clamp(1.25rem, 0.634rem + 2.63vw, 3rem);
   padding-top: f.pxToRem(32);
   
-  &.is-scroll {
+  &.scrolled {
     display: none;
   }
 }
@@ -21,7 +21,7 @@
     width: f.pxToRem(160);
   } 
 
-  &.is-scroll {
+  &.scrolled {
     display: block;
   }
 }
@@ -38,7 +38,7 @@
     @include m.mq('sp') {
       padding: f.pxToRem(28) f.pxToRem(26);
 
-      &.is-scroll {
+      &.scrolled {
         padding: f.pxToRem(20) f.pxToRem(32) f.pxToRem(20) f.pxToRem(40);
     }
  }
