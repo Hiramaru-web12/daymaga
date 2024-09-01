@@ -17,12 +17,6 @@ jQuery(function() {
               $logoTop.fadeOut(fadespeed, function() {
                   $logoDown.fadeIn(fadespeed);
               });
-              $drawerWrap.fadeOut(fadeSpeed, function() {
-                $drawerWrap.addClass('scrolled').fadeIn(fadeSpeed);
-              });
-              $headerSearchSp.fadeOut(fadeSpeed, function() {
-                $headerSearchSp.addClass('scrolled').fadeIn(fadeSpeed);
-              });
           }
       } else {
           if ($header.hasClass('scrolled')) {
@@ -31,12 +25,6 @@ jQuery(function() {
               $headerSearchSp.removeClass('scrolled');
               $logoDown.fadeOut(fadespeed, function() {
                   $logoTop.fadeIn(fadespeed);
-              });
-              $drawerWrap.fadeOut(fadeSpeed, function() {
-                $drawerWrap.removeClass('scrolled').fadeIn(fadeSpeed);
-              });
-              $headerSearchSp.fadeOut(fadeSpeed, function() {
-                $headerSearchSp.removeClass('scrolled').fadeIn(fadeSpeed);
               });
           }
       }
@@ -59,17 +47,17 @@ jQuery(function() {
     // Optional parameters
     loop: true,
     loopAdditionalSlides: 1,
-    spaceBetween: 64,
     centeredSlides: true,
-    slidesPerView: 1.8,
-
+    
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
     },
     speed: 2000,
+    centerInsufficientSlides: true,
     grabCursor: true,
     breakpoints: {
+
     0: {
       slidesPerView: 'auto',
       spaceBetween: 16,
@@ -133,52 +121,6 @@ jQuery(function() {
       el: '.swiper-scrollbar',
     },
   });
-
-  // スクロールのドラッグ有効化
-jQuery.prototype.mousedragscrollable = function () {
-  let target;
-  jQuery(this).each(function (i, e) {
-    jQuery(e).mousedown(function (event) {
-      event.preventDefault();
-      target = jQuery(e);
-      jQuery(e).data({
-        down: true,
-        move: false,
-        x: event.clientX,
-        y: event.clientY,
-        scrollleft: jQuery(e).scrollLeft(),
-        scrolltop: jQuery(e).scrollTop(),
-      });
-      return false;
-    });
-    jQuery(e).click(function (event) {
-      if ($(e).data("move")) {
-        return false;
-      }
-    });
-  });
-  jQuery(document)
-    .mousemove(function (event) {
-      if ($(target).data("down")) {
-        event.preventDefault();
-        let move_x = jQuery(target).data("x") - event.clientX;
-        let move_y = jQuery(target).data("y") - event.clientY;
-        if (move_x !== 0 || move_y !== 0) {
-          $(target).data("move", true);
-        } else {
-          return;
-        }
-        jQuery(target).scrollLeft(jQuery(target).data("scrollleft") + move_x);
-        jQuery(target).scrollTop(jQuery(target).data("scrolltop") + move_y);
-        return false;
-      }
-    })
-    .mouseup(function (event) {
-      jQuery(target).data("down", false);
-      return false;
-    });
-};
-  jQuery(".scroll").mousedragscrollable();
 
 // カテゴリータブの切り替え、ウィンドウサイズで表示数を可変   
     const $tabs = jQuery('.p-tabs__item');
