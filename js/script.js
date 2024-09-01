@@ -3,6 +3,8 @@ jQuery(function() {
   var $header = jQuery('.l-header');
   var $logoTop = jQuery('#js-logo--top');
   var $logoDown = jQuery('#js-logo--down');
+  var $drawerWrap = jQuery('.p-drawer__wrap');
+  var $headerSearchSp = jQuery('.p-header__search--sp');
   var scrollTrigger = 100; 
   var fadespeed = 200; 
 
@@ -10,21 +12,50 @@ jQuery(function() {
       if (jQuery(window).scrollTop() > scrollTrigger) {
           if (!$header.hasClass('scrolled')) {
               $header.addClass('scrolled');
+              $drawerWrap.addClass('scrolled');
+              $headerSearchSp.addClass('scrolled');
               $logoTop.fadeOut(fadespeed, function() {
                   $logoDown.fadeIn(fadespeed);
+              });
+              $drawerWrap.fadeOut(fadeSpeed, function() {
+                $drawerWrap.addClass('scrolled').fadeIn(fadeSpeed);
+              });
+              $headerSearchSp.fadeOut(fadeSpeed, function() {
+                $headerSearchSp.addClass('scrolled').fadeIn(fadeSpeed);
               });
           }
       } else {
           if ($header.hasClass('scrolled')) {
               $header.removeClass('scrolled');
+              $drawerWrap.removeClass('scrolled');
+              $headerSearchSp.removeClass('scrolled');
               $logoDown.fadeOut(fadespeed, function() {
                   $logoTop.fadeIn(fadespeed);
+              });
+              $drawerWrap.fadeOut(fadeSpeed, function() {
+                $drawerWrap.removeClass('scrolled').fadeIn(fadeSpeed);
+              });
+              $headerSearchSp.fadeOut(fadeSpeed, function() {
+                $headerSearchSp.removeClass('scrolled').fadeIn(fadeSpeed);
               });
           }
       }
   });
 
-  var swiper1 = new Swiper('.p-fv-swiper', {
+  // ドロワー開閉
+   jQuery('.c-drawer__icon').click(function(e){
+   e.preventDefault();
+   jQuery('.c-drawer__icon, .l-drawer').toggleClass(`is-active`);
+    return false
+   });
+
+   jQuery('.l-drawer__link a[href^="#"]').click(function(e){
+   e.preventDefault();
+   jQuery('.c-drawer__icon, .l-drawer').removeClass(`is-active`);
+   return false
+ });
+
+  const swiper1 = new Swiper('.p-fv-swiper', {
     // Optional parameters
     loop: true,
     loopAdditionalSlides: 1,
@@ -149,8 +180,7 @@ jQuery.prototype.mousedragscrollable = function () {
 };
   jQuery(".scroll").mousedragscrollable();
 
-// カテゴリータブの切り替え、ウィンドウサイズで表示数を可変
-    const $tabs = jQuery('.p-tabs__item');jQuery(document).ready(function($) {
+// カテゴリータブの切り替え、ウィンドウサイズで表示数を可変   
     const $tabs = jQuery('.p-tabs__item');
     const $tabContents = jQuery('.p-tabs__pane');
   
@@ -163,12 +193,14 @@ jQuery.prototype.mousedragscrollable = function () {
       } else if (windowWidth >= 750) {
         visibleCards = 6;
       } else {
-        visibleCards = 6; // 750px未満でも6枚表示
+        visibleCards = 6; 
       }
   
       jQuery('.p-top-card__wrap').each(function() {
-        jQuery(this).find('.p-top__card').slice(visibleCards).hide(); // 指定枚数を超えたカードを非表示
-        jQuery(this).find('.p-top__card').slice(0, visibleCards).show(); // 表示するカードを表示
+        jQuery(this).find('.p-top__card').slice(visibleCards).hide(); 
+        // 指定枚数を超えたカードを非表示
+        jQuery(this).find('.p-top__card').slice(0, visibleCards).show(); 
+        // 表示するカードを表示
       });
     }
   
@@ -197,4 +229,4 @@ jQuery.prototype.mousedragscrollable = function () {
     // ウィンドウリサイズ時の処理
     jQuery(window).on('resize', adjustCardDisplay);
   });
-  });
+

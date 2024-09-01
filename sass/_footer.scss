@@ -17,7 +17,6 @@
   }
 }
 .p-footer__logo {
-  width: f.pxToRem(234);
 
   @include m.mq('sp') {
     margin: 0 auto;
@@ -27,10 +26,12 @@
 .p-footer-nav__wrap {
   display: flex;
   gap: clamp(2.5rem, 1.972rem + 2.25vw, 4rem);
+  padding: f.pxToRem(16) 0;
 
   @include m.mq('sp')  {
     max-width: f.pxToRem(282);
     margin: 0 auto;
+    padding: f.pxToRem(36) 0;
   }
 }
 
@@ -53,10 +54,17 @@
  line-height: 120%;
  display: block;
  margin: 0 auto;
+ color: v.$color-bg;
 }
 
 .p-footer-copyright {
  text-align: center;
+
+ small {
+   font-size: f.pxToRem(16);
+   font-weight: 300;
+   line-height: 120%;
+ }
 }
 
 .p-footer__text {

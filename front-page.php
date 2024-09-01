@@ -10,7 +10,8 @@
         <?php $pickup_query = new WP_Query(
         array(
           'post_type'      => 'post',
-          'posts_per_page' => 5
+          'posts_per_page' => 5,
+          'tag'            => 'pickup'
         )
       );
       ?>
@@ -26,7 +27,8 @@
               <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
               <?php endif; ?>
               <div class="p-card__body">
-                <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+                <time class="p-card__time p-fv-card__time"
+                  datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
                 <h1 class="p-card__title p-fv-card__title"><?php the_title(); ?></h1>
                 <?php
                   $this_category = get_the_category();

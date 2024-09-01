@@ -44,10 +44,12 @@ fv スライダー
 .p-fv__card {
   max-width: f.pxToRem(540);
   background: #fff;
+  border-radius: 20px;
   padding: f.pxToRem(28);
   border-radius: 20px;
   box-shadow: 0px 0px 30px 0px rgb(0 0 0 /0.02);
   cursor: pointer;
+  transition: .3s ease-out;
 
   @include m.mq('sp'){
     max-width: f.pxToRem(270);
@@ -57,11 +59,16 @@ fv スライダー
    opacity: .8;
   }
 
-  
   &.swiper-slide-active {
     transform: translateY(-40px)!important;
     transition: transform 1s ease !important;
   }
+}
+
+.p-fv-card__time {
+  font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
+  font-weight: 400;
+  line-height: 120%; 
 }
 
 .p-fv-swiper-button__wrap{
@@ -77,12 +84,16 @@ fv スライダー
   &:after {
     display: none;
   }
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
 .p-fv-swiper__button--prev {
   background: url(../img/top/arrow-left.svg) no-repeat center center / contain;
   left: calc(50% - 380px);
-  top: 50%;
+  top: 45%;
   position: absolute;
   z-index: 1;
 
@@ -94,7 +105,7 @@ fv スライダー
 .p-fv-swiper__button--next{
   background: url(../img/top/arrow-right.svg) no-repeat center center / contain;
   left: calc(50% + 340px);
-  top: 50%;
+  top: 45%;
   position: absolute;
   z-index: 1;
 
@@ -137,7 +148,6 @@ fv スライダー
   background-image: url("../img/recommend/recommend-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: f.pxToRem(592);
 }
 
 .p-recommend__title {

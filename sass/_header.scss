@@ -36,7 +36,7 @@
     border-radius: 0 0 0 32px;
 
     @include m.mq('sp') {
-      padding: f.pxToRem(28) f.pxToRem(26);
+      padding: f.pxToRem(26);
 
       &.scrolled {
         padding: f.pxToRem(20) f.pxToRem(32) f.pxToRem(20) f.pxToRem(40);
@@ -80,17 +80,16 @@ justify-content: center;
 align-items: center;
 justify-content: center;
 
-&.is-scroll {
+&.scrolled {
   flex-direction: row-reverse;
   justify-content: space-between;
 }
 }
 
 .p-header__search--sp {
-  display: block;
   margin-top: f.pxToRem(58); 
 
-  &.is-scroll {
+  &.scrolled {
    margin-top: 0;
    margin-right: f.pxToRem(80);
   }

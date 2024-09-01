@@ -122,7 +122,7 @@ p.recapcha-text {
 ドロワー
 =============================================== */
 .l-drawer__icon {
-  top: 1.25rem;
+  top: 1.5rem;
   z-index: 10;
 }
 
@@ -214,7 +214,7 @@ CTA
 トップページ
 =============================================== */
 .l-fv {
-  padding: 12.5rem 0 3rem;
+  padding: 10rem 0 3rem;
 }
 @media screen and ( max-width: 750px ) {
   .l-fv {
@@ -692,7 +692,7 @@ CTA
 }
 @media screen and ( max-width: 750px ) {
   .p-header__nav {
-    padding: 1.75rem 1.625rem;
+    padding: 1.625rem;
   }
   .p-header__nav.scrolled {
     padding: 1.25rem 2rem 1.25rem 2.5rem;
@@ -746,7 +746,7 @@ CTA
           align-items: center;
   justify-content: center;
 }
-.p-drawer__wrap.is-scroll {
+.p-drawer__wrap.scrolled {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -757,10 +757,9 @@ CTA
 }
 
 .p-header__search--sp {
-  display: block;
   margin-top: 3.625rem;
 }
-.p-header__search--sp.is-scroll {
+.p-header__search--sp.scrolled {
   margin-top: 0;
   margin-right: 5rem;
 }
@@ -823,9 +822,6 @@ CTA
   }
 }
 
-.p-footer__logo {
-  width: 14.625rem;
-}
 @media screen and ( max-width: 750px ) {
   .p-footer__logo {
     margin: 0 auto;
@@ -837,11 +833,13 @@ CTA
   display: -ms-flexbox;
   display: flex;
   gap: clamp(2.5rem, 1.972rem + 2.25vw, 4rem);
+  padding: 1rem 0;
 }
 @media screen and ( max-width: 750px ) {
   .p-footer-nav__wrap {
     max-width: 17.625rem;
     margin: 0 auto;
+    padding: 2.25rem 0;
   }
 }
 
@@ -870,10 +868,16 @@ CTA
   line-height: 120%;
   display: block;
   margin: 0 auto;
+  color: #E6EDF3;
 }
 
 .p-footer-copyright {
   text-align: center;
+}
+.p-footer-copyright small {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 120%;
 }
 
 .p-footer__text {
@@ -902,7 +906,7 @@ CTA
 .p-card {
   background: #fff;
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 12px;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
   max-width: 16.875rem;
@@ -921,14 +925,13 @@ CTA
 }
 
 .p-card__body {
-  margin: 1rem 0;
   gap: 0.5rem;
 }
 
 .p-card__time {
   color: #676E87;
   font-family: "Noto Sans JP";
-  font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
+  font-size: 0.75rem;
   line-height: 120%;
 }
 
@@ -955,16 +958,20 @@ CTA
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
   white-space: nowrap;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  margin-top: 0.625rem;
   cursor: pointer;
 }
 .p-card-tag__list::-webkit-scrollbar,
 .scroll::-webkit-scrollbar {
   display: none;
+}
+
+.p-card__tag {
+  margin-right: 0.5rem;
 }
 
 /* ===============================================
@@ -1428,11 +1435,14 @@ fv スライダー
 .p-fv__card {
   max-width: 33.75rem;
   background: #fff;
+  border-radius: 20px;
   padding: 1.75rem;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02);
   cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 @media screen and ( max-width: 750px ) {
   .p-fv__card {
@@ -1451,6 +1461,12 @@ fv スライダー
   transition: transform 1s ease, -webkit-transform 1s ease !important;
 }
 
+.p-fv-card__time {
+  font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
+  font-weight: 400;
+  line-height: 120%;
+}
+
 .p-fv-swiper-button__wrap {
   max-width: 47rem;
 }
@@ -1465,11 +1481,15 @@ fv スライダー
 .p-fv-swiper__button--next:after {
   display: none;
 }
+.p-fv-swiper__button--prev:hover,
+.p-fv-swiper__button--next:hover {
+  opacity: 0.8;
+}
 
 .p-fv-swiper__button--prev {
   background: url(../img/top/arrow-left.svg) no-repeat center center/contain;
   left: calc(50% - 380px);
-  top: 50%;
+  top: 45%;
   position: absolute;
   z-index: 1;
 }
@@ -1482,7 +1502,7 @@ fv スライダー
 .p-fv-swiper__button--next {
   background: url(../img/top/arrow-right.svg) no-repeat center center/contain;
   left: calc(50% + 340px);
-  top: 50%;
+  top: 45%;
   position: absolute;
   z-index: 1;
 }
@@ -1531,7 +1551,6 @@ fv スライダー
   background-image: url("../img/recommend/recommend-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 37rem;
 }
 
 .p-recommend__title {

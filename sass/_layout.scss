@@ -33,7 +33,7 @@
 ドロワー
 =============================================== */
 .l-drawer__icon {
-  top: f.pxToRem(20);
+  top: f.pxToRem(24);
   z-index: 10;
 }
 
@@ -119,7 +119,7 @@ CTA
 トップページ
 =============================================== */
 .l-fv {
-  padding: f.pxToRem(200) 0 f.pxToRem(48);
+  padding: f.pxToRem(160) 0 f.pxToRem(48);
 
   @include m.mq('sp'){
     padding-bottom: f.pxToRem(58);
