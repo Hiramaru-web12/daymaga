@@ -263,10 +263,11 @@
           $query = new WP_Query($args);
         ?>
         <div class="p-tabs__pane <?php echo $slug === 'all' ? 'active' : ''; ?>" id="<?php echo $slug; ?>">
-          <div class="p-card-category__wrap" style="background-color: <?php echo esc_attr($color); ?>;">
+          <div class="p-card-category__wrap p-top-card__wrap"
+            style="background-color: <?php echo esc_attr($color); ?>;">
             <?php if ($query->have_posts()) : ?>
             <?php while($query->have_posts()) : $query->the_post(); ?>
-            <div class="p-card">
+            <div class="p-card p-top__card">
               <a href="<?php the_permalink(); ?>">
 
                 <div class="p-card__img">

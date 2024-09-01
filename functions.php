@@ -13,4 +13,14 @@ function my_script_init() {
  }
  add_action("wp_enqueue_scripts", "my_script_init");
 
+ function custom_title_length($title) {
+  $max = 32;
+  if (mb_strlen($title) > $max) {
+      return mb_substr($title, 0, $max) . '...';
+  } else {
+      return $title;
+  }
+}
+add_filter('the_title', 'custom_title_length');
+
  ?>

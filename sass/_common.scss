@@ -25,7 +25,7 @@
  max-width: f.pxToRem(270);
  transition: .3s ease-out;
  cursor: pointer;
-
+ 
  &:hover {
   opacity: .8;
  }
@@ -164,18 +164,19 @@
 .p-card-category__wrap {
   border-radius: 0px 16px 16px 16px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-template-rows: auto;
   gap: f.pxToRem(30);
   padding: f.pxToRem(32);
-  justify-items: center;
+  justify-content: start;
   
   @media (width < 750px){
     padding: f.pxToRem(12);
     grid-template-columns: minmax(270px, 1fr);
     border-radius: 16px 0px 16px 16px;
+    justify-items: center;
   }
-
+  
   @media (750px <width < 950px){
     grid-template-columns: repeat(2, 1fr);
   }
