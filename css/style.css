@@ -246,6 +246,13 @@ CTA
   padding: 2.5rem 0;
 }
 
+@media screen and ( min-width: 751px ) and ( max-width: 1199px ) {
+  .l-latest__inner {
+    max-width: 43.75rem;
+    margin: 0 auto;
+  }
+}
+
 /* ===============================================
 おすすめ記事
 =============================================== */
@@ -1626,9 +1633,6 @@ fv スライダー
 }
 @media screen and ( min-width: 751px ) and ( max-width: 1199px ) {
   .p-card-latest__wrap {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
-    grid-template-rows: auto;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

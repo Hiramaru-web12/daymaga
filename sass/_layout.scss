@@ -147,6 +147,14 @@ CTA
 .l-latest {
   padding: f.pxToRem(40) 0;
 }
+ 
+.l-latest__inner {
+  @include m.mq('tab'){
+    max-width: f.pxToRem(700);
+    margin: 0 auto;
+  } 
+
+}
 
 /* ===============================================
 おすすめ記事

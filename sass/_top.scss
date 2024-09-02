@@ -137,15 +137,12 @@ fv スライダー
   }
 
   @include m.mq('tab') {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
-   grid-template-rows: auto;
    align-items: center;
    padding: f.pxToRem(32) 0;
    gap: f.pxToRem(20);
   }
-
 }
+
 .p-latest__title {
   justify-content: center;
 
