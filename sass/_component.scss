@@ -157,6 +157,7 @@ CTA
   svg {
     padding-left: f.pxToRem(10);
     vertical-align: middle;
+    padding-bottom: f.pxToRem(6);
 
     @include m.mq('sp'){
       width: f.pxToRem(18);
@@ -210,6 +211,7 @@ CTA
   svg {
     padding-left: f.pxToRem(10);
     vertical-align: middle;
+    padding-bottom: f.pxToRem(6);
 
     @include m.mq('sp'){
       width: f.pxToRem(18);

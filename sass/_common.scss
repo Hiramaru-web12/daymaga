@@ -283,6 +283,11 @@
   color: v.$color-primary;
   line-height: f.pxToRem(36); 
   transition: .3s ease-out;
+   
+  &.prev,
+  &.next {
+    width: f.pxToRem(36);
+  }
 
   a {
     display: block;
