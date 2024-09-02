@@ -54,6 +54,7 @@ fv スライダー
 
   @include m.mq('sp'){
     max-width: f.pxToRem(270);
+    margin: 0 f.pxToRem(8);
   } 
   
   &:hover {
@@ -231,10 +232,10 @@ fv スライダー
 }
 
 .p-recommend__wrap {
-  padding: f.pxToRem(36) 0;
+  padding: f.pxToRem(36) 0 f.pxToRem(44);
 
   @include m.mq('sp'){
-    padding: f.pxToRem(96) 0 f.pxToRem(24);
+    padding: f.pxToRem(96) 0 f.pxToRem(28);
   } 
 }
 
@@ -250,5 +251,27 @@ fv スライダー
     padding-top: f.pxToRem(20);
   } 
 }
+
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  left: 0;
+  bottom: var(--swiper-scrollbar-bottom, 0);
+  top: var(--swiper-scrollbar-top, auto);
+  z-index: 50;
+  height: var(--swiper-scrollbar-size, 8px);
+  width: clamp(20rem, -4.648rem + 105.16vw, 90rem);
+  background: var(--swiper-scrollbar-bg-color, #DDE1F0);
+}
+
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: var(--swiper-scrollbar-drag-bg-color,  #135097);
+  border-radius: var(--swiper-scrollbar-border-radius, 10px);
+  left: 0;
+  top: 0;
+}
+
 
 

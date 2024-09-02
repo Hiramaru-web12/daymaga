@@ -727,6 +727,10 @@ CTA
   margin-left: clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
 }
 
+#js-search {
+  cursor: pointer;
+}
+
 /* ===============================================
 ドロワー
 =============================================== */
@@ -1448,6 +1452,7 @@ fv スライダー
 @media screen and ( max-width: 750px ) {
   .p-fv__card {
     max-width: 16.875rem;
+    margin: 0 0.5rem;
   }
 }
 .p-fv__card:hover {
@@ -1649,11 +1654,11 @@ fv スライダー
 }
 
 .p-recommend__wrap {
-  padding: 2.25rem 0;
+  padding: 2.25rem 0 2.75rem;
 }
 @media screen and ( max-width: 750px ) {
   .p-recommend__wrap {
-    padding: 6rem 0 1.5rem;
+    padding: 6rem 0 1.75rem;
   }
 }
 
@@ -1669,6 +1674,27 @@ fv スライダー
   .p-all-button__wrap {
     padding-top: 1.25rem;
   }
+}
+
+.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  left: 0;
+  bottom: var(--swiper-scrollbar-bottom, 0);
+  top: var(--swiper-scrollbar-top, auto);
+  z-index: 50;
+  height: var(--swiper-scrollbar-size, 8px);
+  width: clamp(20rem, -4.648rem + 105.16vw, 90rem);
+  background: var(--swiper-scrollbar-bg-color, #DDE1F0);
+}
+
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: var(--swiper-scrollbar-drag-bg-color, #135097);
+  border-radius: var(--swiper-scrollbar-border-radius, 10px);
+  left: 0;
+  top: 0;
 }
 
 .p-entry {

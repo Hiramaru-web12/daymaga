@@ -10,7 +10,8 @@
         <?php $pickup_query = new WP_Query(
         array(
           'post_type'      => 'post',
-          'posts_per_page' => 5
+          'posts_per_page' => 5,
+          'tag'            => 'pickup'
         )
       );
       ?>
@@ -26,7 +27,8 @@
               <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimg.png" alt="画像がありません">
               <?php endif; ?>
               <div class="p-card__body">
-                <time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+                <time class="p-card__time p-fv-card__time"
+                  datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
                 <h1 class="p-card__title p-fv-card__title"><?php the_title(); ?></h1>
                 <?php
                   $this_category = get_the_category();
@@ -121,7 +123,7 @@
       <?php wp_reset_postdata(); ?>
     </div>
     <div class="p-latest-button__wrap">
-      <a href="" class="c-more__button">もっとみる</a>
+      <a href="<?php echo esc_url(get_category_link(get_category_by_slug('new'))); ?>" class="c-more__button">もっとみる</a>
     </div>
   </div>
 </section>
@@ -157,7 +159,8 @@
         <?php $pickup_query = new WP_Query(
         array(
           'post_type'      => 'post',
-          'posts_per_page' => 5
+          'posts_per_page' => 5,
+          'tag'            => 'pickup'
         )
       );
       ?>
@@ -263,10 +266,11 @@
           $query = new WP_Query($args);
         ?>
         <div class="p-tabs__pane <?php echo $slug === 'all' ? 'active' : ''; ?>" id="<?php echo $slug; ?>">
-          <div class="p-card-category__wrap">
+          <div class="p-card-category__wrap p-top-card__wrap"
+            style="background-color: <?php echo esc_attr($color); ?>;">
             <?php if ($query->have_posts()) : ?>
             <?php while($query->have_posts()) : $query->the_post(); ?>
-            <div class="p-card">
+            <div class="p-card p-top__card">
               <a href="<?php the_permalink(); ?>">
 
                 <div class="p-card__img">
@@ -315,7 +319,7 @@
     </div>
 
     <div class="p-all-button__wrap">
-      <a href="" class="c-more__button">もっとみる</a>
+      <a href="<?php echo esc_url(home_url('/'));?>all/" class="c-more__button">もっとみる</a>
     </div>
   </div>
 </section>
