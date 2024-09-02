@@ -137,7 +137,7 @@ CTA
   padding: f.pxToRem(160) 0 f.pxToRem(48);
 
   @include m.mq('sp'){
-    padding-bottom: f.pxToRem(58);
+    padding: f.pxToRem(200) 0 f.pxToRem(58);
   } 
 }
 
@@ -172,6 +172,10 @@ CTA
 =============================================== */
 .l-all {
   padding-top: f.pxToRem(64);
+
+  @include m.mq('sp'){
+    padding-top: f.pxToRem(52);
+  } 
 }
 
 .l-tabs {

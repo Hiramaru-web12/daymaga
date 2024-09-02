@@ -150,12 +150,19 @@ CTA
   
   @include m.mq('sp') {
     font-size: f.pxToRem(18);
-    padding:f.pxToRem(12) f.pxToRem(14) f.pxToRem(10) f.pxToRem(18);
+    padding:f.pxToRem(8) f.pxToRem(12) f.pxToRem(8) f.pxToRem(18);
+    letter-spacing: f.pxToRem( .36);
   }
 
   svg {
     padding-left: f.pxToRem(10);
     vertical-align: middle;
+
+    @include m.mq('sp'){
+      width: f.pxToRem(18);
+      height: f.pxToRem(18);
+      padding-bottom: f.pxToRem(4);
+    } 
   }
   
   &::before {
@@ -167,11 +174,17 @@ CTA
     left: 0;
     border: 1px solid #fff;
     border-radius: 8px 8px 8px 0;
-    font-size: clamp(0.875rem, 0.787rem + 0.38vw, 1.125rem);
-    background: v.$color-primary;
+    font-size: f.pxToRem(18);
+    background: #2A84BF;
     color: #fff;
     padding: f.pxToRem(6) f.pxToRem(14);
     line-height: 130%;
+    font-weight: 500;
+
+    @include m.mq('sp'){
+      font-size: f.pxToRem(14);
+      padding: f.pxToRem(4) f.pxToRem(14);
+    } 
   }
 }
 
@@ -190,12 +203,19 @@ CTA
 
   @include m.mq('sp') {
     font-size: f.pxToRem(18);
-    padding:f.pxToRem(12) f.pxToRem(14) f.pxToRem(10) f.pxToRem(18);
+    padding:f.pxToRem(8) f.pxToRem(14) f.pxToRem(6) f.pxToRem(20);
+    letter-spacing: f.pxToRem(1.44);
   }
 
   svg {
     padding-left: f.pxToRem(10);
     vertical-align: middle;
+
+    @include m.mq('sp'){
+      width: f.pxToRem(18);
+      height: f.pxToRem(18);
+      padding-bottom: f.pxToRem(4);
+    } 
   }
   
   &::before {
@@ -207,11 +227,17 @@ CTA
     left: 0;
     border: 1px solid #fff;
     border-radius: 8px 8px 8px 0;
-    font-size: clamp(0.875rem, 0.787rem + 0.38vw, 1.125rem);
+    font-size: f.pxToRem(18);
     background: #fff;
-    color: v.$color-primary;
+    color: v.$color-accent;
     padding: f.pxToRem(6) f.pxToRem(14);
     line-height: 130%;
+    font-weight: 500;
+
+    @include m.mq('sp'){
+      font-size: f.pxToRem(14);
+      padding: f.pxToRem(3) f.pxToRem(14);
+    } 
   }
 }
 
@@ -278,7 +304,11 @@ CTA
 @include m.mq('sp'){
  font-size: f.pxToRem(24);
  letter-spacing: f.pxToRem(4.8);
-} 
+
+ img {
+  width: f.pxToRem(42);
+ }
+ } 
 }
 
 /* ===============================================
