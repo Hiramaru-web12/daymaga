@@ -2,24 +2,23 @@
 
 <section class="l-fv p-fv">
   <div class="p-fv-swiper-box">
-    <!-- Slider main container -->
     <div class="swiper p-fv-swiper">
-      <!-- Additional required wrapper -->
       <div class="swiper-wrapper p-fv-swiper-wrap">
-        <!-- Slides -->
-        <?php $pickup_query = new WP_Query(
-        array(
-          'post_type'      => 'post',
-          'posts_per_page' => 5,
-          'tag'            => 'pickup'
-        )
-      );
-      ?>
-        <?php if ($pickup_query->have_posts()) : ?>
-        <?php while($pickup_query->have_posts()) : ?>
-        <?php $pickup_query->the_post(); ?>
-        <a href="<?php the_permalink(); ?>">
-          <div class="swiper-slide p-fv__card">
+        <?php 
+        $pickup_query = new WP_Query(
+          array(
+            'post_type'      => 'post',
+            'posts_per_page' => 5,
+            'tag'            => 'pickup'
+          )
+        );
+        
+        if ($pickup_query->have_posts()) : 
+          while($pickup_query->have_posts()) : 
+            $pickup_query->the_post(); 
+        ?>
+        <div class="swiper-slide p-fv__card">
+          <a href="<?php the_permalink(); ?>">
             <div class="p-card__img">
               <?php if (has_post_thumbnail()) : ?>
               <?php the_post_thumbnail(); ?>
@@ -33,38 +32,36 @@
                 <?php
                   $this_category = get_the_category();
                   if($this_category) {
-                  $this_category_color = get_field( 'color', 'category_' . $this_category[0]->term_id);
-                  $this_category_name  = $this_category[0]->name;
-                  echo '<p class="p-card__category p-fv-card__category" style= "' . esc_attr(
-                     'color:' . $this_category_color . ';
-                     border: 1px solid ' . $this_category_color) . ';">' . esc_html( $this_category_name ) . '</p>';
-                  }?>
+                    $this_category_color = get_field( 'color', 'category_' . $this_category[0]->term_id);
+                    $this_category_name  = $this_category[0]->name;
+                    echo '<p class="p-card__category p-fv-card__category" style="' . esc_attr(
+                      'color:' . $this_category_color . ';
+                      border: 1px solid ' . $this_category_color) . ';">' . esc_html( $this_category_name ) . '</p>';
+                  }
+                  ?>
               </div>
             </div>
             <?php $post_tags = get_the_tags(); ?>
+            <?php if ($post_tags) : ?>
             <ul class="p-card-tag__list">
-              <?php if ($post_tags) : ?>
               <?php foreach($post_tags as $tag) : ?>
-              <li class="p-card__tag c-tag"><?php echo $tag->name; ?>
-              </li>
-        </a>
-        <?php endforeach; ?>
-        <?php endif; ?>
-        </ul>
+              <li class="p-card__tag c-tag"><?php echo $tag->name; ?></li>
+              <?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
+          </a>
+        </div>
+        <?php 
+          endwhile; 
+        endif; 
+        wp_reset_postdata(); 
+        ?>
       </div>
-      </a>
-      <?php endwhile; ?>
-      <?php endif; ?>
-      <?php wp_reset_postdata(); ?>
     </div>
-
-    <!-- If we need navigation buttons -->
-  </div>
-  <div class="p-fv-swiper-button__wrap">
-    <div class="swiper-button-prev p-fv-swiper__button--prev"></div>
-    <div class="swiper-button-next p-fv-swiper__button--next"></div>
-  </div>
-
+    <div class="p-fv-swiper-button__wrap">
+      <div class="swiper-button-prev p-fv-swiper__button--prev"></div>
+      <div class="swiper-button-next p-fv-swiper__button--next"></div>
+    </div>
   </div>
 </section>
 
