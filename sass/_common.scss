@@ -67,19 +67,12 @@
  padding: f.pxToRem(4) f.pxToRem(16);
 }
 
-.p-card-tag__list,
-.scroll {
+.p-card-tag__list{
   display: flex;
   white-space: nowrap;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-    scrollbar-width: none;
   margin-top: f.pxToRem(10);
-  cursor: pointer;
-
-    &::-webkit-scrollbar {
-      display: none;
-  }
+  pointer-events: none;
+  overflow-x: hidden;
 }
 
 .p-card__tag {

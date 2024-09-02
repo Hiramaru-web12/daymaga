@@ -957,21 +957,14 @@ CTA
   padding: 0.25rem 1rem;
 }
 
-.p-card-tag__list,
-.scroll {
+.p-card-tag__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   margin-top: 0.625rem;
-  cursor: pointer;
-}
-.p-card-tag__list::-webkit-scrollbar,
-.scroll::-webkit-scrollbar {
-  display: none;
+  pointer-events: none;
+  overflow-x: hidden;
 }
 
 .p-card__tag {
