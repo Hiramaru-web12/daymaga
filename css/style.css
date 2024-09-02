@@ -890,6 +890,7 @@ CTA
 @media screen and ( max-width: 750px ) {
   .p-footer__logo {
     margin: 0 auto;
+    width: 14.625rem;
   }
 }
 
@@ -897,14 +898,14 @@ CTA
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: clamp(2.5rem, 1.972rem + 2.25vw, 4rem);
+  gap: clamp(2.25rem, 1.6rem + 2.67vw, 4rem);
   padding: 1rem 0;
 }
 @media screen and ( max-width: 750px ) {
   .p-footer-nav__wrap {
     max-width: 17.625rem;
     margin: 0 auto;
-    padding: 2.25rem 0;
+    padding: 0;
   }
 }
 
@@ -938,6 +939,7 @@ CTA
 
 .p-footer-copyright {
   text-align: center;
+  margin-top: 0.5rem;
 }
 .p-footer-copyright small {
   font-size: 1rem;
