@@ -35,28 +35,43 @@
 .l-drawer__icon {
   top: f.pxToRem(24);
   z-index: 10;
+  right: f.pxToRem(22);
+
+  @include m.mq('tab') {
+   right: f.pxToRem(60);
+  } 
 }
 
 .l-drawer {
-  display: none;
+  visibility: hidden;
+  transition: opacity .2s linear;
   position: fixed;
-
+  opacity: 0;
+  pointer-events: none;
+  
   &.is-active {
     position: absolute;
+    visibility:visible ;
     content: "";
     top: 0;
     right: 0;
-    display: block;
     z-index: 8;
-    width: 76.8%;
-    height: 80vh;
+    width: f.pxToRem(240);
+    height: f.pxToRem(344);
     border-radius: 0 0 0 24px;
+    pointer-events: auto;
+    opacity: 1;
+
+    @include m.mq('tab'){
+      width: f.pxToRem(320);   
+     } 
   }
-}
+  }
+
 
 .l-drawer__inner {
   width: f.pxToRem(112);
-  margin: f.pxToRem(82) auto 0;
+  margin: f.pxToRem(78) auto 0;
   text-align: center;
 }
 

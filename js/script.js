@@ -43,11 +43,21 @@ jQuery(function() {
    return false
  });
 
+ // ウィンドウリサイズ時の処理
+  jQuery(window).on('resize', function() {
+   if (jQuery(window).width() > 1199) { 
+    jQuery('.c-drawer__icon, .l-drawer').removeClass('is-active');
+  }
+});
+
   // タグの検索機能
   jQuery('#js-search, #js-search--sp, #js-search--drawer').click(function(e) {
     e.preventDefault(); 
         var headerHeight = 100; // ヘッダーの高さを取得
-        var targetPosition = jQuery('.l-tag').offset().top - headerHeight; // ヘッダーの高さを引いた位置を計算
+        var targetPosition = jQuery('.l-tag').offset().top - headerHeight; 
+
+    jQuery('.c-drawer__icon, .l-drawer').removeClass('is-active');
+
     jQuery('html, body').animate({
         scrollTop: targetPosition
     }, 500, 'swing'); 
