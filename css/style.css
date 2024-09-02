@@ -350,12 +350,18 @@ CTA
       align-self: center;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
+  font-weight: 700;
+  line-height: 1.25rem;
 }
 .c-header__button--left .button-top {
   font-size: 0.75rem;
   background: #135097;
   color: #fff;
   border-radius: 8px 8px 0 0;
+  padding: 0.125rem 0;
+}
+.c-header__button--left .button-bottom {
+  padding: 0.25rem 0;
 }
 .c-header__button--left:hover {
   opacity: 0.8;
@@ -382,6 +388,9 @@ CTA
   background: #fff;
   color: #135097;
   border-radius: 8px 8px 0 0;
+}
+.c-header__button--right .button-bottom {
+  padding: 0.25rem 0;
 }
 .c-header__button--right:hover {
   opacity: 0.8;
@@ -776,7 +785,7 @@ CTA
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
+  gap: 2.25rem;
   margin-left: clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
 }
 

@@ -62,7 +62,7 @@
 
 .p-header-button__wrap {
   display: flex;
-  gap:clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
+  gap:f.pxToRem(36);
   margin-left: clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
 }
 
