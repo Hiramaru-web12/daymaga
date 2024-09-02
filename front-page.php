@@ -45,25 +45,25 @@
             <ul class="p-card-tag__list">
               <?php if ($post_tags) : ?>
               <?php foreach($post_tags as $tag) : ?>
-              <li class="p-card__tag c-tag"><a
-                  href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+              <li class="p-card__tag c-tag"><?php echo $tag->name; ?>
               </li>
-              <?php endforeach; ?>
-              <?php endif; ?>
-            </ul>
-          </div>
         </a>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
         <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
+        </ul>
       </div>
+      </a>
+      <?php endwhile; ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
+    </div>
 
-      <!-- If we need navigation buttons -->
-    </div>
-    <div class="p-fv-swiper-button__wrap">
-      <div class="swiper-button-prev p-fv-swiper__button--prev"></div>
-      <div class="swiper-button-next p-fv-swiper__button--next"></div>
-    </div>
+    <!-- If we need navigation buttons -->
+  </div>
+  <div class="p-fv-swiper-button__wrap">
+    <div class="swiper-button-prev p-fv-swiper__button--prev"></div>
+    <div class="swiper-button-next p-fv-swiper__button--next"></div>
+  </div>
 
   </div>
 </section>
@@ -110,8 +110,7 @@
           <ul class="p-card-tag__list">
             <?php if ($post_tags) : ?>
             <?php foreach($post_tags as $tag) : ?>
-            <li class="p-card__tag c-tag"><a
-                href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+            <li class="p-card__tag c-tag"><?php echo $tag->name; ?>
             </li>
             <?php endforeach; ?>
             <?php endif; ?>
@@ -194,8 +193,7 @@
             <ul class="p-card-tag__list">
               <?php if ($post_tags) : ?>
               <?php foreach($post_tags as $tag) : ?>
-              <li class="p-card__tag c-tag"><a
-                  href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+              <li class="p-card__tag c-tag"><?php echo $tag->name; ?>
               </li>
               <?php endforeach; ?>
               <?php endif; ?>
@@ -297,8 +295,7 @@
                 <ul class="p-card-tag__list">
                   <?php if ($post_tags) : ?>
                   <?php foreach($post_tags as $tag) : ?>
-                  <li class="p-card__tag c-tag"><a
-                      href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+                  <li class="p-card__tag c-tag"><?php echo $tag->name; ?>
                   </li>
                   <?php endforeach; ?>
                   <?php endif; ?>
