@@ -1698,7 +1698,7 @@ fv スライダー
   top: var(--swiper-scrollbar-top, auto);
   z-index: 50;
   height: var(--swiper-scrollbar-size, 8px);
-  width: clamp(20rem, -4.648rem + 105.16vw, 90rem);
+  width: clamp(20rem, 4.287rem + 67.04vw, 64.625rem);
   background: var(--swiper-scrollbar-bg-color, #DDE1F0);
 }
 
