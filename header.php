@@ -52,8 +52,8 @@
             <p class="button-bottom">案件の紹介登録</p>
           </button>
         </div>
-        <div class="p-header__search--pc is-pc">
-          <img src="<?php echo get_template_directory_uri(  ); ?>/img/header/tabler_search.svg" alt="search">
+        <div class="p-header__search--pc is-pc" id="js-search">
+          <img src=" <?php echo get_template_directory_uri(  ); ?>/img/header/tabler_search.svg" alt="search">
         </div>
         <!-- drawer -->
         <div class="p-drawer__wrap is-sp">
@@ -64,7 +64,7 @@
               <span></span>
             </div>
           </div>
-          <div class="p-header__search--sp ">
+          <div class="p-header__search--sp" id="js-search--sp">
             <img src="<?php echo get_template_directory_uri(  ); ?>/img/header/tabler_search.svg" alt="search">
           </div>
         </div>
@@ -77,8 +77,9 @@
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tips'))); ?>"> TIPS</a></li>
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('interview'))); ?>">インタビュー</a></li>
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('news'))); ?>">ニュース</a></li>
-          <li><a href=""><img src="<?php echo get_template_directory_uri(  ); ?>/img/header/tabler_search.svg"
-                alt="search"></a></li>
+          <li id="js-search--drawer"><img
+              src="<?php echo get_template_directory_uri(  ); ?>/img/header/tabler_search.svg" alt="search">
+          </li>
         </ul>
       </div>
     </div>

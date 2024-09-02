@@ -43,11 +43,21 @@ jQuery(function() {
    return false
  });
 
+  // タグの検索機能
+  jQuery('#js-search, #js-search--sp, #js-search--drawer').click(function(e) {
+    e.preventDefault(); 
+        var headerHeight = 100; // ヘッダーの高さを取得
+        var targetPosition = jQuery('.l-tag').offset().top - headerHeight; // ヘッダーの高さを引いた位置を計算
+    jQuery('html, body').animate({
+        scrollTop: targetPosition
+    }, 500, 'swing'); 
+});
+
   const swiper1 = new Swiper('.p-fv-swiper', {
     // Optional parameters
     loop: true,
     loopAdditionalSlides: 1,
-    centeredSlides: true,
+    centeredSlides: true, 
     
     autoplay: {
       delay: 4000,
@@ -56,17 +66,7 @@ jQuery(function() {
     speed: 2000,
     centerInsufficientSlides: true,
     grabCursor: true,
-    breakpoints: {
-
-    0: {
-      slidesPerView: 'auto',
-      spaceBetween: 16,
-    },
-    700: {
-      slidesPerView: 'auto',
-    },
-    
-  },
+    slidesPerView: 'auto',
   
     // Navigation arrows
     navigation: {
@@ -78,9 +78,9 @@ jQuery(function() {
 
   const swiper2 = new Swiper('.p-recommend-swiper', {
     // Optional parameters
-    loop: true,
-    loopAdditionalSlides: 1,
     spaceBetween: 32,
+    grabCursor: true,
+    slidesPerView: 'auto',
   
     // If we need pagination
     pagination: {
@@ -101,9 +101,9 @@ jQuery(function() {
 
   const swiper3 = new Swiper('.p-entry-recommend-swiper', {
     // Optional parameters
-    loop: true,
-    loopAdditionalSlides: 1,
     spaceBetween: 32,
+    grabCursor: true,
+    slidesPerView: 'auto',
   
     // If we need pagination
     pagination: {
