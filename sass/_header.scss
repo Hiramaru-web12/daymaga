@@ -68,6 +68,14 @@
 
 .p-header__search--pc {
  margin-left: clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
+ 
+ img {
+   transition: .3s ease-out;
+
+   &:hover {
+     opacity: .8;
+    }
+ }
 }
 
 #js-search {

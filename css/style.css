@@ -799,6 +799,13 @@ CTA
 .p-header__search--pc {
   margin-left: clamp(1.75rem, -4.5rem + 8.33vw, 3rem);
 }
+.p-header__search--pc img {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.p-header__search--pc img:hover {
+  opacity: 0.8;
+}
 
 #js-search {
   cursor: pointer;
