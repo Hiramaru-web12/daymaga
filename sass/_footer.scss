@@ -43,11 +43,19 @@
   line-height: 120%;
   letter-spacing: f.pxToRem(0.8);
   font-weight: 500;
-
+  
   @include m.mq('sp') {
-  gap: f.pxToRem(32);
-  margin: 0 auto;
- } 
+    gap: f.pxToRem(32);
+    margin: 0 auto;
+  } 
+  
+  
+  li {
+   transition: .3s ease-out;
+   &:hover {
+    opacity:  .8;
+   }
+ }
 }
 
 .p-footer-copyright__wrap {
