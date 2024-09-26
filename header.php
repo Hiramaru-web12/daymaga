@@ -43,14 +43,14 @@
           <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('news'))); ?>">ニュース</a></li>
         </ul>
         <div class="p-header-button__wrap is-pc">
-          <button class="c-header__button--left">
+          <a class="c-header__button--left" href="<?php echo esc_url(home_url('/')); ?>/contact-project">
             <p class="button-top">コンサルをお探しの企業様</p>
             <p class="button-bottom">まずは無料相談</p>
-          </button>
-          <button class="c-header__button--right">
+          </a>
+          <a class="c-header__button--right" href="<?php echo esc_url(home_url('/')); ?>contact-introduce/">
             <p class="button-top">コンサルタントの方</p>
             <p class="button-bottom">案件の紹介登録</p>
-          </button>
+          </a>
         </div>
         <div class="p-header__search--pc is-pc" id="js-search">
           <img src=" <?php echo get_template_directory_uri(  ); ?>/img/header/tabler_search.svg" alt="search">
