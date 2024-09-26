@@ -1,42 +1,52 @@
+@use 'variable' as v;
+@use 'mixin' as m;
+@use 'function' as f;
 
 .p-contact__container {
-  width: 80%;
+  max-width: f.pxToRem(720);
   margin: auto;
   overflow: hidden;
-  padding: 20px;
+  padding: f.pxToRem(40);
   background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(0 0 0 /0.1);
+
+  @include m.mq('sp') {
+    border-radius: 8px;
+    padding: f.pxToRem(20);
+  } 
 }
 
-@media (max-width: 768px) {
+@include m.mq('sp'){
   .l-form__container {
       width: 95%;
-      padding: 1rem;
+      padding: f.pxToRem(16);
   }
-}
+} 
 
-h1 {
-  color: #2c3e50;
+.p-form__title {
+  font-size: clamp(1.25rem, 1.064rem + 0.76vw, 1.75rem);
+  letter-spacing: clamp(0.125rem, 0.106rem + 0.08vw, 0.175rem);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: f.pxToRem(24);
+  color: v.$color-accent;
 }
 
 .p-form__row {
-  margin-bottom: 15px;
+  margin-bottom: f.pxToRem(16);
 }
 
-p {
+.p-form__message {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #7f8c8d;
+  margin-bottom: f.pxToRem(32);
+  font-size: clamp(0.875rem, 0.829rem + 0.19vw, 1rem);
 }
 
 label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #34495e;
+  margin-bottom: f.pxToRem(8);
+  margin-left: f.pxToRem(4);
+  font-weight: v.$bold;
 }
 
 input[type="text"],
@@ -45,25 +55,37 @@ input[type="tel"],
 select,
 textarea {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #bdc3c7;
+  box-sizing: border-box;
+  padding: f.pxToRem(12);
+  border: 1px solid #c4c4c4;
   border-radius: 4px;
-  font-size: 1rem;
   transition: border-color 0.3s ease;
+
+  &::placeholder {
+    color: #c4c4c4;
+  }
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-select:focus,
-textarea:focus {
-  border-color: #3498db;
-  outline: none;
+select {
+  width: 50%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+
+  &:focus {
+    border-color: v.$color-primary;
+    outline: none;
+  }
 }
 
 textarea {
-  height: 120px;
+  height: f.pxToRem(120);
   resize: vertical;
+  resize: none;
 }
 
 .required {
@@ -71,48 +93,113 @@ textarea {
 }
 
 
-.checkbox-group {
+
+.p-form-checkbox__items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.5rem;
-}
-
-@media (max-width: 768px) {
+  gap: f.pxToRem(8);
   
-  .checkbox-group {
-      grid-template-columns: 1fr;
+  @include m.mq('sp'){
+    grid-template-columns: 1fr;
+  } 
+  
+  [type="checkbox"] {
+    appearance: none;
+    cursor: none;
+    margin: 0;
+  }
+
+  .wpcf7-list-item-label {
+    display: inline-block;
+    padding-left: f.pxToRem(22);
+    margin-right: f.pxToRem(18);
+    height: f.pxToRem(18);
+    line-height: f.pxToRem(18);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: f.pxToRem(14);
+    
+    &:hover {
+      opacity: .8;
+    }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: f.pxToRem(18);
+      height: f.pxToRem(18);
+      border: 1px solid #c4c4c4;
+      border-radius: 4px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: f.pxToRem(14);
+      height: f.pxToRem(7);
+      border-left: 2px solid v.$color-primary;
+      border-bottom: 2px solid v.$color-primary;
+      background-color: transparent;
+      transform: rotate(-45deg);
+      top:f.pxToRem(3);
+      left: f.pxToRem(2);
+      opacity: 0;
+
+    }    
+  }
+
+  [type="checkbox"]:checked + span{
+    &::after{
+      opacity: 1;
+    }
   }
 }
 
-
-.radio-group {
-  display: flex;
-  gap: 15px;
+/*デフォルトのスタイルを無効化する*/
+input[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.checkbox-group label {
-  font-weight: normal;
-  display: inline-block;
-  margin-left: 0.5rem;
+span.wpcf7-spinner {
+  display: none;
 }
 
-button {
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  background-color: #2980b9;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-button:hover {
-  background-color: #3498db;
-}
-
+/* ===============================================
+問い合わせ送信ボタン
+=============================================== */
+.p-contact__submit {
+  [type="submit"] {
+    width: f.pxToRem(240);
+    display: block;
+    margin: 0 auto;
+    font-weight: 700;
+    background-color: v.$color-accent;
+    color:#fff;
+    font-family: inherit;
+    border: 1px solid v.$color-accent;
+    font-size: .875em;
+    line-height: 20.27px;
+    padding: f.pxToRem(16) 0;
+    border-radius: 8px;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    letter-spacing: f.pxToRem(1.28);
+  
+    &:not(:disabled):hover {
+      opacity: .8;
+		}
+    }
+  }
 
 
 
