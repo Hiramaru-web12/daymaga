@@ -211,11 +211,6 @@
     <h1 class="c-section__title p-all__title">
       <img src="<?php echo get_template_directory_uri(); ?>/img/common/logo.png" alt="ロゴ">すべての記事
     </h1>
-
-    <ul class="p-order__list--sp">
-      <li class="active"><a href="">新着順</a></li>
-      <li><a href="">人気順</a></li>
-    </ul>
     <div class="l-tabs p-tabs">
       <div class="p-tab-list__wrap">
         <ul class="p-tabs__list">
@@ -246,11 +241,8 @@
           </li>
           <?php endforeach; ?>
         </ul>
-        <ul class="p-order__list">
-          <li class="active"><a href="">新着順</a></li>
-          <li><a href="">人気順</a></li>
-        </ul>
       </div>
+
       <div class="p-tabs__content">
         <?php
         foreach ($categories as $slug => $name) :

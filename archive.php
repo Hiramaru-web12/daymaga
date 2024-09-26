@@ -13,10 +13,6 @@
       <?php echo esc_html($current_name); ?>の記事
     </h1>
 
-    <ul class="p-order__list--sp">
-      <li class="active"><a href="">新着順</a></li>
-      <li><a href="">人気順</a></li>
-    </ul>
     <div class="l-tabs p-tabs">
       <div class="p-tab-list__wrap">
         <ul class="p-tabs__list">
@@ -33,10 +29,6 @@
             style="background-color: <?php echo esc_attr($color); ?>;">
             <?php echo esc_html($current_name); ?>
           </li>
-        </ul>
-        <ul class="p-order__list">
-          <li class="active"><a href="">新着順</a></li>
-          <li><a href="">人気順</a></li>
         </ul>
       </div>
       <div class="p-tabs__content">
