@@ -28,7 +28,7 @@
           <?php the_post_thumbnail(); ?>
         </div>
         <?php else: ?>
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/noimg.png'); ?>" alt="No Image Available">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/noimg.png'); ?>" alt="No Image">
         <?php endif; ?>
       </div>
 
@@ -43,7 +43,7 @@
         if ($post_tags) {
           echo '<div class="p-card-tag__list">';
           foreach ($post_tags as $tag) {
-            echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '" class="c-tag">' . esc_html($tag->name) . '</a> ';
+            echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '" class="c-tag p-card-tag">' . esc_html($tag->name) . '</a> ';
           }
           echo '</div>';
         }

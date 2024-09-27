@@ -720,11 +720,14 @@ CTA
   letter-spacing: 0.12rem;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
+  width: 27.8125rem;
 }
 @media screen and ( max-width: 750px ) {
   .c-entry__button {
     font-size: 0.875rem;
     letter-spacing: 0.07rem;
+    width: 16.25rem;
+    padding: 0.875rem 1.75rem;
   }
 }
 .c-entry__button:hover {
@@ -1056,6 +1059,7 @@ CTA
   font-size: 0.8125rem;
   border-radius: 6px;
   margin-top: 0.5rem;
+  margin: 0.5rem 0 0.625rem;
   padding: 0.25rem 1rem;
 }
 
@@ -1064,12 +1068,11 @@ CTA
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  margin-top: 0.625rem;
   pointer-events: none;
   overflow-x: hidden;
 }
 
-.p-card__tag {
+.p-card-tag {
   margin-right: 0.5rem;
 }
 
@@ -1983,6 +1986,10 @@ fv スライダー
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
 }
 .p-entry__bottom p {
   font-size: 0.9375rem;
@@ -2004,6 +2011,14 @@ fv スライダー
 =============================================== */
 .p-entry-recommend__title {
   color: #135097;
+}
+.p-entry-recommend__title img {
+  width: 3.25rem;
+}
+@media screen and ( max-width: 750px ) {
+  .p-entry-recommend__title img {
+    width: 2.625rem;
+  }
 }
 
 .p-entry-recommend__button--prev,

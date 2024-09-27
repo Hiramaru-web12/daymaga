@@ -368,10 +368,13 @@ CTA
  line-height: 130%; 
  letter-spacing: f.pxToRem(1.92);
  transition: .3s ease-out;
+ width: f.pxToRem(445);
 
 @include m.mq('sp'){
  font-size: f.pxToRem(14);
  letter-spacing: f.pxToRem(1.12);
+ width: f.pxToRem(260);
+ padding: f.pxToRem(14) f.pxToRem(28);
  } 
 
  &:hover {

@@ -181,7 +181,7 @@ td {
    font-size:f.pxToRem(15);
    line-height: 200%; 
    letter-spacing: f.pxToRem(2.25);
-
+   
    @include m.mq('sp') {
    font-size: f.pxToRem(14);
    line-height: 180%; 
@@ -218,6 +218,8 @@ td {
   border-top: 1px solid v.$color-bg;
   padding-top: f.pxToRem(20);
   display: flex;
+  align-items: center;
+  gap: f.pxToRem(32);
 
   p {
     font-size: f.pxToRem(15);
@@ -236,6 +238,14 @@ td {
 =============================================== */
 .p-entry-recommend__title {
  color: v.$color_accent;
+
+ img {
+  width: f.pxToRem(52);
+
+  @include m.mq('sp') {
+    width: f.pxToRem(42);
+  } 
+ }
 }
 
 .p-entry-recommend__button--prev,

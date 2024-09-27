@@ -29,4 +29,11 @@ add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
   return false;
 } 
- ?>
+
+function introduce_button_shortcode($attrs, $content = "") {
+  $url = esc_url(home_url('/contact-introduce/'));
+  return '<a class="c-entry__button p-entry__button" href="' . $url . '">コンサルタント案件の紹介登録をする</a>';
+}
+
+add_shortcode('button-introduce', 'introduce_button_shortcode');
+?>

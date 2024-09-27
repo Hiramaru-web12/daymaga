@@ -64,18 +64,18 @@
  font-size: f.pxToRem(13);
  border-radius: 6px;
  margin-top: f.pxToRem(8);
+ margin: f.pxToRem(8) 0 f.pxToRem(10); 
  padding: f.pxToRem(4) f.pxToRem(16);
 }
 
 .p-card-tag__list{
   display: flex;
   white-space: nowrap;
-  margin-top: f.pxToRem(10);
   pointer-events: none;
   overflow-x: hidden;
 }
 
-.p-card__tag {
+.p-card-tag {
   margin-right: f.pxToRem(8);
 }
 
