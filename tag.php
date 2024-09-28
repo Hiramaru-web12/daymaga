@@ -80,7 +80,7 @@
                 <ul class="p-card-tag__list">
                   <?php if ($post_tags) : ?>
                   <?php foreach($post_tags as $tag) : ?>
-                  <li class="p-card__tag c-tag"><?php echo $tag->name; ?>
+                  <li class="c-tag"><?php echo $tag->name; ?>
                   </li>
                   <?php endforeach; ?>
                   <?php endif; ?>

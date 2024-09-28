@@ -73,10 +73,7 @@
   white-space: nowrap;
   pointer-events: none;
   overflow-x: hidden;
-}
-
-.p-card-tag {
-  margin-right: f.pxToRem(8);
+  gap: f.pxToRem(8);
 }
 
 /* ===============================================
