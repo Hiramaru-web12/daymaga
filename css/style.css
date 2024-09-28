@@ -1051,6 +1051,10 @@ CTA
   line-height: 140%;
   letter-spacing: 0.01875rem;
   margin-top: 0.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .p-card__category {

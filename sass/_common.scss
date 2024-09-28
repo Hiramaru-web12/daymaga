@@ -56,6 +56,10 @@
  line-height: 140%; 
  letter-spacing: f.pxToRem( .3);
  margin-top: f.pxToRem(8);
+ overflow: hidden;
+ display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp: 2;
 } 
 
 .p-card__category {

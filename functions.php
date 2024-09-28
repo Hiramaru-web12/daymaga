@@ -13,16 +13,6 @@ function my_script_init() {
  }
  add_action("wp_enqueue_scripts", "my_script_init");
 
- function custom_title_length($title) {
-  if (!is_single()) {
-    $max = 32;
-    if (mb_strlen($title) > $max) {
-      return mb_substr($title, 0, $max) . '...';
-    }
-  }
-  return $title;
-}
-add_filter('the_title', 'custom_title_length');
 
 // Contact Form 7で自動挿入されるPタグ、brタグを削除
 add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
